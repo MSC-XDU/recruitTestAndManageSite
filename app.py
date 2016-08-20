@@ -5,7 +5,7 @@ from flask import render_template
 from datetime import datetime,timedelta
 import leancloud
 from leancloud.errors import LeanCloudError
-
+import os
 app = Flask(__name__)
 
 APP_ID = os.environ['LC_APP_ID']
