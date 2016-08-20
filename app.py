@@ -38,12 +38,17 @@ def hashconvert(s):
 def index():
     token = request.cookies.get('token')
     if not token:
-        return render_template('login.html')
+        return render_template('login.html',message=[])
     try:
         u = leancloud.User()
         u.become(token)
     except LeanCloudError as e:
+        message = ['text-danger',]
+        if e.code == 210:
+            message.append('用户名/密码 错误')
+            return render_template('login.html',message=message)
         if e.code == 211:
+            message.append('不存在的用户')
             return render_template('login.html')
     return redirect('/rockaroll')
 
@@ -54,15 +59,14 @@ def login():
     u = leancloud.User()
     username = request.form.get('email')
     password = request.form.get('pass')
-    message = None
     try:
         u.login(username,password)
     except LeanCloudError as e:
         message = ['text-danger',]
         if e.code == 210:
-            message[1] = u"用户名/密码 错误"
+            message.append("用户名/密码 错误")
         if e.code == 211:
-            message[1] = u"不存在的用户"
+            message.append("不存在的用户")
         return render_template('login.html',message=message)
     r = redirect('/rockaroll')
     response = make_response(r)
@@ -345,14 +349,14 @@ def lost():
         try:
             leancloud.User().request_password_reset(email)
         except LeanCloudError as e:
-            message = ['text-success',]
+            message = ['text-danger',]
             if e.code == 205:
-                message[1] = '错误的注册邮箱'
+                message.append('错误的注册邮箱')
                 return render_template('lost.html',message=message)
         message = ['text-success','申请重置密码成功！请检查你的邮箱...']
         return render_template('login.html',message=message)
     else:
-        return render_template('login.html')
+        return render_template('lost.html',message=[])
 
 if __name__ == '__main__':
     app.run(debug=True)
