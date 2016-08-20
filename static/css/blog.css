@@ -239,7 +239,7 @@ ul.nav-tabs button.btn:hover,
 ul.nav-tabs button.btn:focus{
 	background-color: #9667ff;
 	color: #fff;
-	border: none;
+	outline: #9667ff;
 }
 
 
