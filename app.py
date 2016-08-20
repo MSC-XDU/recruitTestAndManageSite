@@ -185,17 +185,20 @@ def webtest(num):
             answer = request.form.get('answer')
             if num == '1':
                 if u.id[-6:-2] == answer:
-                    w.set('passNum',1)
-                    w.save()
+                    if schedule != 4:
+                        w.set('passNum',1)
+                        w.save()
                     return redirect('/web/2')
             if num == '2':
                 if u.id[-4:] == answer:
-                    w.set('passNum',2)
-                    w.save()
+                    if schedule != 4:
+                        w.set('passNum',2)
+                        w.save()
                     return redirect('/web/3')
         elif num == '3':
-                w.set('passNum',3)
-                w.save()
+                if schedule != 4:
+                    w.set('passNum',3)
+                    w.save()
                 return """nice jobs,now you can go next.""",200
         else:
             try:
