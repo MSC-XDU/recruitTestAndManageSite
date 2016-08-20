@@ -97,7 +97,7 @@ def rock():
 
     try:
         TY = q1.equal_to('email',email).find()[0]
-        ty['ty1'] = ty['ty2'] = ty['ty3'] = ty['ty31'] = ty['ty32'] = ty['ty4'] = None
+        ty['ty1'] = ty['ty2'] = ty['ty3'] = ty['ty31'] = ty['ty32'] = ty['ty4'] = ty['ty5'] = None
         for i in ty.keys():
             ty[i] = TY.get(i)
     except LeanCloudError:
@@ -223,7 +223,7 @@ def submit():
             return redirect('/')
     u.login()
 
-    tyList = ['ty1','ty2','ty4']
+    tyList = ['ty1','ty2','ty4','ty31','ty32','ty5']
     acmList = ['acm%d'%i for i in range(1,4)]
     appList = ['app%d'%i for i in range(1,4)]
     gameList = ['game%d'%i for i in range(1,4)]
@@ -238,11 +238,7 @@ def submit():
         ty = TY()
     for t in tyList:
         ty.set(t,request.form.get(t))
-    if request.form.get('ty31'):
-        ty.set('ty31',request.form.get('ty31'))
-    elif request.form.get('ty32'):
-        ty.set('ty32',request.form.get('ty32'))
-    elif request.form.get('ty31') and request.form.get('ty32'):
+    if request.form.get('ty31') and request.form.get('ty32'):
         ty.set('ty3',hashconvert(request.form.get('ty31')) == hashconvert(request.form.get('ty32')))
     ty.set('user',u)
     ty.set('email',u.get('email'))

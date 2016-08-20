@@ -56,7 +56,7 @@
                         <img class="pic" src="static/img/1.1.jpg" width="100%">
 						<textarea type="text" class="form-control" rows="4" placeholder="地点？学校？经纬度？" name="ty1">{% if ty['ty1'] %}{{ ty['ty1']|e }}{% endif %}</textarea>
 						<h3 id="ty2" class="question">
-                            2.先有鸡还是先有蛋
+                            2.Zejun 的复仇
                             {% if ty['ty2'] %}
                                 <i class="fa fa-check right"></i>
                             {% endif %}
@@ -89,6 +89,18 @@
             </h3>
           	<p>结合实际，请写出至少10种在将来生活中 IoT 和 Machine Learning 的可能的用途或者产品，写得越多越好，发挥你的大胆想象和合理推测能力。</p>
           	<textarea type="text" class="form-control" rows="4" placeholder="发挥想象哦！" name="ty4">{% if ty['ty4'] %}{{ ty['ty4']|e }}{% endif %}</textarea>
+			  <h3 class="question">
+				  5.Zejun 的再复仇
+				  {% if ty['ty5'] %}
+                    <i class="fa fa-check right"></i>
+                {% endif %}
+			  </h3>
+			  <p>Zejun 有一天在<del>和女友谈笑风生</del>写 C 代码,看到了这么一行漂亮的预处理代码:</p>
+			  <blockquote>
+				  #define offset(type, field) (size_t) &(((type *)0)->field)
+			  </blockquote>
+			  <p>想到最近 Ma 总是找他麻烦<del>爆他毁照</del>,于是他找到 Ma,故意问 Ma 这行代码什么意思,你能帮 Ma 解决这个问题吗?</p>
+			  <textarea type="text" class="form-control" rows="4" placeholder="...Ma 真的不知道该怎么提示了..." name="ty5">{% if ty['ty5'] %}{{ ty['ty5']|e }}{% endif %}</textarea>
           </div><!-- /.blog-post -->
           <hr>
 
