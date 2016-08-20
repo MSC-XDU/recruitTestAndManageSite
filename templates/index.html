@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="//v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#side-navbar" data-offset='20'>
+
+    <div class="blog-masthead hidden-xs">
+      <div class="container">
+        <nav id="navbar" class="blog-nav">
+					<a class="blog-brand"><img src="static/img/logo.PNG" height="30px"></a>
+          <a class="blog-nav-item navbar-right" href="#">{{ email }}</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container hidden-xs" style="padding-top:40px">
+      <div class="row">
+          <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="col-sm-9 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title" id="tongyong">通用题</h2>
+            <p class="blog-post-meta">先来热热身吧</p>
+						<h3 id="ty1" class="question">
+                            1.找地点
+                            {% if ty['ty1'] %}
+                                <i class="fa fa-check right"></i>
+                            {% endif %}
+                        </h3>
+						<p>你能找到这张图在哪拍的吗？将答案填入下空中。</p>
+                        <img class="pic" src="static/img/1.1.jpg" width="100%">
+						<textarea type="text" class="form-control" rows="4" placeholder="地点？学校？经纬度？" name="ty1">{% if ty['ty1'] %}{{ ty['ty1']|e }}{% endif %}</textarea>
+						<h3 id="ty2" class="question">
+                            2.先有鸡还是先有蛋
+                            {% if ty['ty2'] %}
+                                <i class="fa fa-check right"></i>
+                            {% endif %}
+                        </h3>
+						<p>在 <del>Ruby</del> 所有 OOP 语言中，所有类的类型是 Class , Object 是类，所以 Object 是 Class 的一个实例；但是，所有类最终继承自 Object , Class 是类，所以 Class 继承自 Object。</p>
+						<p>请根据自己理解解释这段话的含义。</p>
+						<textarea type="text" class="form-control" rows="4" placeholder="欢迎生动而又逗逼的解释..." name="ty2">{% if ty['ty2'] %}{{ ty['ty2']|e }}{% endif %}</textarea>
+						<h3 id="ty3" class="question">
+                            3.找相同
+                            {% if ty['ty3'] %}
+                                <i class="fa fa-check right"></i>
+                            {% endif %}
+                        </h3>
+						<p>存在一个 hash 函数，c 语言解释如下：</p>
+						<img src="static/img/code.png" class="pic" width="40%">
+						<p>请你给出两个字符串s1和s2，使这个 hash 函数产生冲突。</p>
+						<div class="form-group" style="padding-bottom:20px">
+							<div class="col-sm-5">
+								<input type="text" class="form-control" name="ty31" placeholder="这里写 s1 ..." value="{% if ty['ty31'] %}{{ ty['ty31']|e }}{% endif %}">
+							</div>
+							<div class="col-sm-5 col-sm-offset-2">
+								<input type="text" class="form-control" name="ty32" placeholder="这里写 s2 ..." value="{% if ty['ty32'] %}{{ ty['ty32']|e }}{% endif %}">
+							</div>
+						</div>
+          	<h3 class="question">
+                4.来说说你的看法
+                {% if ty['ty4'] %}
+                    <i class="fa fa-check right"></i>
+                {% endif %}
+            </h3>
+          	<p>结合实际，请写出至少10种在将来生活中 IoT 和 Machine Learning 的可能的用途或者产品，写得越多越好，发挥你的大胆想象和合理推测能力。</p>
+          	<textarea type="text" class="form-control" rows="4" placeholder="发挥想象哦！" name="ty4">{% if ty['ty4'] %}{{ ty['ty4']|e }}{% endif %}</textarea>
+          </div><!-- /.blog-post -->
+          <hr>
+
+          <div class="blog-post">
+            <h2 class="blog-post-title" id="acm">ACM</h2>
+						<p class="blog-post-meta">混沌了空间和复杂度</p>
+						<p>完成以下三道测试题，首先先选定你使用的编程语言。</p>
+						<p>因为资源有限，我们不会立刻执行提交的代码，也不会显示执行情况，每道题我们将会选择最新的提交结果进行测试，希望同学们在本机测试好再提交。</p>
+						<p><del>也是因为资源问题，</del>大家一定要注意保留内存...除了第一题以外，其它题目都会注明来源方便同学们去做测试。</p>
+						<select class="form-control" name="acmlanguage">
+                            <option>请选择...</option>
+                            {% for lang in langList %}
+							    <option value="{{ lang|e }}">{{ lang|e }}</option>
+                            {% endfor %}
+						</select>
+          	<div style="padding-top:40px">
+							<h3 class="question" id="acm1">
+                                1.经济计算
+                                {% if acm['acm1'] %}
+                                    <i class="fa fa-check"></i>
+                                {% endif %}
+                            </h3>
+							<p>Kolya 开发了一个经济仿真游戏，他特别喜欢做游戏测试，邀请你同他一起完成</p>
+							<p>这款游戏开始时先给玩家发放 n 枚游戏币，希望玩家换取相应价值的物品且花光所有游戏币。可换取的物品如下：房子(1234567 游戏币)，汽车(123456 游戏币)和电脑(1234 游戏币)。即是否存在非负数 a,b,c,使 1234567*a+123456*b+1234*c = n成立。</p>
+							<p><strong>Input</strong>:The first line of the input contains a single integer n (1 ≤ n ≤ 109) — Kolya's initial game-coin score.</p>
+							<p><strong>Output</strong>:Print "YES" (without quotes) if it's possible that Kolya spent all of his initial n coins buying only houses, cars and computers. Otherwise print "NO" (without quotes).</p>
+							<p><strong>Examples:</strong></p>
+							<blockquote>
+								<strong>Input</strong>:1359257 #1234567 + 123456 + 1234 = 1359257<br>
+								<strong>Output</strong>:YES
+							</blockquote>
+							<blockquote>
+								<strong>Input</strong>:17851817<br>
+								<strong>Output</strong>:NO
+							</blockquote>
+							<input type="file" class="filestyle" name="acm1"/>
+						</div>
+						<div style="padding-top:40px">
+							<h3 class="question" id="acm2">
+                                2.等待队列
+                                {% if acm['acm2'] %}
+                                    <i class="fa fa-check"></i>
+                                {% endif %}
+                            </h3>
+							<img class="pic" src="http://acm.xidian.edu.cn/upload/201604/G1.png">
+							<strong>输入:</strong>
+							<img class="pic" src="http://acm.xidian.edu.cn/upload/201604/G2.png">
+							<strong>输出:</strong>
+							<p>对于每个第 3 类操作，输出 1 行，表示队列中所有人不耐烦程度的最大值。</p>
+							<strong>示例:</strong>
+							<p>输入:</p>
+							<blockquote>
+								8 <br>
+								1 5 <br>
+								1 5 <br>
+								1 5 <br>
+								3 <br>
+								2 <br>
+								3 <br>
+								1 20 <br>
+								3 <br>
+							</blockquote>
+							<p>输出：</p>
+							<blockquote>
+								8 <br>
+								9 <br>
+								21 <br>
+							</blockquote>
+							<p>提示：</p>
+							<img src="http://acm.xidian.edu.cn/upload/201604/G3.png" class='pic'>
+							<input type="file" class="filestyle" name="acm2"/>
+							<p style="padding-top:10px">来源：<a href="http://acm.xidian.edu.cn/problem.php?id=1156" target="_blank">http://acm.xidian.edu.cn/problem.php?id=1156</a></p>
+						</div>
+          	<div style="padding-top:40px">
+          		<h3 class="question" id="acm3">
+                    3.粉刷匠
+                    {% if acm['acm3'] %}
+                        <i class="fa fa-check"></i>
+                    {% endif %}
+                </h3>
+          		<p>windy有 N 条木板需要被粉刷。 每条木板被分为 M 个格子。 每个格子要被刷成红色或蓝色。 windy每次粉刷，只能选择一条木板上一段连续的格子，然后涂上一种颜色。 每个格子最多只能被粉刷一次。 如果windy只能粉刷 T 次，他最多能正确粉刷多少格子？ 一个格子如果未被粉刷或者被粉刷错颜色，就算错误粉刷。</p>
+							<p><strong>Input:</strong>输入文件 paint.in 第一行包含三个整数，N M T。 接下来有 N 行，每行一个长度为 M 的字符串，'0'表示红色，'1'表示蓝色。</p>
+          		<p><strong>Output:</strong>输出文件paint.out包含一个整数，最多能正确粉刷的格子数。</p>
+          		<strong>Example:</strong>
+          		<p>输入：</p>
+          		<blockquote>
+          			3 6 3 <br>
+								111111 <br>
+								000000 <br>
+								001100 <br>
+          		</blockquote>
+          		<p>输出：</p>
+          		<blockquote>
+          			16
+          		</blockquote>
+							<p><strong>提示：</strong>
+          			30%的数据，满足 1 &lt;= N,M &lt;= 10 ； 0 &lt;= T &lt;= 100 。 100%的数据，满足 1 &lt;= N,M &lt;= 50 ； 0 &lt;= T &lt;= 2500 。
+          		</p>
+          		<input type="file" class="filestyle" name="acm3"/>
+          		<p style="padding-top:10px">来源：<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1296" target="_blank">http://www.lydsy.com/JudgeOnline/problem.php?id=1296</a></p>
+          	</div>
+          </div><!-- /.blog-post -->
+          <hr>
+					<div class="blog-post">
+            <h2 class="blog-post-title" id="app">APP</h2>
+            <p class="blog-post-meta">万物皆 App</p>
+						<h3 class="question">1.找数</h3>
+          	<p>自己创建不大于 500 的斐波那契数列。并找出其中的质数。</p>
+          	<blockquote>
+							提交格式:每个数字中间空一个空格<br>
+          		1 2 3 4 5 6 7 8 9
+          	</blockquote>
+          	<textarea type="text" class="form-control" rows="2" placeholder="...还不赶紧找..." name="app1">{% if app['app1'] %}{{ app['app1']|e }}{% endif %}</textarea>
+          	<h3 class="question">2.找数再找数</h3>
+          	<p>有能力者可以再将找到的质数中不大于 20 的数逐一加自己身份证最后一位数字，组成新数列，得到的新数列的项作累乘求和。</p>
+          	<p><del>前端表示这个你们自己面试时候再提交吧...记得带着代码来哦...</del></p>
+          	<div class="checkbox disabled">
+							<label>
+								<input type="checkbox" name="app2"{% if app['app2'] %} checked {% endif %}>
+									勾选表示已经完成本题
+							</label>
+						</div>
+          	<h3 class="question">
+                3.找 Java
+                {% if app['app3'] %} <i class="fa fa-check"></i>{% endif %}
+            </h3>
+						<p>图片 java.jpg 中隐藏了很多 java ，请找出他们并回答“java”的个数。</p>
+          	<p>提示：如果找不出 java ，可能是打开方式不对。</p>
+          	<img src="static/img/Java.jpg" class="pic" width=100%>
+          	<input type="number" class="form-control" name=app3 placeholder="填写你找到了多少个 Java"{% if app['app3'] %} value={{ app['app3'] }}{% endif %}>
+          </div><!-- /.blog-post -->
+					<hr>
+          <div class="blog-post">
+            <h2 class="blog-post-title" id="game">GAME</h2>
+            <p class="blog-post-meta">娱乐至上</p>
+						<h3 class="question">1.开胃菜尝尝鲜{% if game['game1'] %}<i class="fa fa-check"></i>{% endif %}</h3>
+						<p><a href="http://ctf.idf.cn/game/pro/37">http://ctf.idf.cn/game/pro/37</a> 在线完成这道题目。</p>
+          	<div class="checkbox disable">
+							<label>
+								<input type="checkbox" name="game1" {% if game['game1'] %}checked{% endif %}>
+									勾选表示已经完成本题。
+							</label>
+						</div>
+          	<h3 class="question">2.看图会意</h3>
+          	<div class="row">
+          		<div class="col-xs-4">
+          			<img src="static/img/FAB8477B0D35475998FF3931AB4444FA.jpg" width="80%" class="pic" class="display:block">
+							</div>
+							<div class="col-xs-8">
+								<textarea type="text" class="form-control" rows="10" placeholder="除了看图片你还能看到什么..." name="game2">{% if game['game2'] %}{{ game['game2']|e }}{% endif %}</textarea>
+							</div>
+						</div>
+          	<h3 class="question">3.又看图会意</h3>
+          	<div class="row">
+							<div class="col-xs-6">
+								<img src="static/img/1A711C5D64CE4647AFB259A7FA17FDEE.png" class="pic" width="">
+							</div>
+							<div class="col-xs-6">
+								<p>提示：首字母，首字母大写</p>
+								<textarea type="text" class="form-control" rows="10" placeholder="快根据提示去找吧..." name="game3">{% if game['game3'] %}{{ game['game3']|e }}{% endif %}</textarea>
+							</div>
+          	</div>
+          </div><!-- /.blog-post -->
+					<hr>
+					<div class="blog-post">
+            <h2 class="blog-post-title" id="hips">HIPS</h2>
+            <p class="blog-post-meta">我是造轮子的小行家</p>
+						<h3 class="question">1.来我们继续来找图</h3>
+						<p><del>这题其实就是通用题第一题的进阶...</del></p>
+           	<p>来看图，使用你的各种本领来猜出以下图片的拍摄地点。</p>
+           	<div class="row">
+							<div class="col-xs-5">
+								<a href="/static/img/hips1.jpg" target="_blank"><img src="/static/img/hips1.jpg" class="pic" width="100%"></a>
+							</div>
+							<div class="col-xs-7">
+								{% if hips['hips1'] %}<i class="fa fa-check"></i>{% endif %}
+								<textarea type="text" class="form-control" rows="6" placeholder="...这才是第一张..." name="hips1">{% if hips['hips'] %}{{ hips['hips1']|e }}{% endif %}</textarea>
+							</div>
+						</div>
+           	<div class="row">
+           	<div class="col-xs-5">
+							<a href="/static/img/hips2.jpg" target="_blank"><img src="/static/img/hips2.jpg" class="pic" width="100%"></a>
+						</div>
+           	<div class="col-xs-7">
+           		{% if hips['hips2'] %}<i class="fa fa-check"></i>{% endif %}
+           		<textarea type="text" class="form-control" rows="16" placeholder="...第二张..." name="hips2">{% if hips['hips2'] %}{{ hips['hips2']|e }}{% endif %}</textarea>
+           	</div>
+           	</div>
+           	<div class="row">
+           		<div class="col-xs-5">
+           			<a href="static/img/hips3.jpg" target="_blank"><img src="static/img/hips3.jpg" class="pic" width="100%"></a>
+           		</div>
+           		<div class="col-xs-7">
+           			{% if hips['hips3'] %}<i class="fa fa-check"></i>{% endif %}
+           			<textarea type="text" class="form-control" rows="6" placeholder="...Hips 的学长真是残暴..." name="hips3">{% if hips['hips3'] %}{{ hips['hips3']|e }}{% endif %}</textarea>
+           		</div>
+           	</div>
+           	<h3 class="question">2.找规律{% if hips['hips4'] %}<i class="fa fa-check"></i>{% endif %}</h3>
+           	<p>存在函数 f(x,y)，请通过以下几个等式找到 f(x,y) 的表达式。</p>
+           	<table class="table table-striped table-bordered">
+           		<thead>
+           			<tr>
+									<td>f(x,y)</td>
+									<td>x</td>
+									<td>y</td>
+								</tr>
+							</thead>
+           		<tbody>
+           			<tr>
+           				<td>1</td>
+           				<td>8</td>
+           				<td>9</td>
+           			</tr>
+           			<tr>
+           				<td>8</td>
+           				<td>4</td>
+           				<td>12</td>
+           			</tr>
+           			<tr>
+           				<td>86</td>
+           				<td>25</td>
+           				<td>79</td>
+           			</tr>
+           			<tr>
+           				<td>73</td>
+           				<td>100</td>
+           				<td>45</td>
+           			</tr>
+           			<tr>
+           				<td>384</td>
+           				<td>128</td>
+           				<td>256</td>
+           			</tr>
+           			<tr>
+           				<td>1000</td>
+           				<td>899</td>
+           				<td>107</td>
+           			</tr>
+           		</tbody>
+           	</table>
+           	<textarea type="text" class="form-control" rows="3" placeholder="除了四则运算还会有什么？？？..." name="hips4">{% if hips['hips4'] %}{{ hips['hips4']|e }}{% endif %}</textarea>
+           	<h3 class="question">3.统计词频</h3>
+           	<p>统一下图中二字词词频，不考虑这个词是否具有含义，即标点符号也算作一个字符。</p>
+           	<p><del>觉得很简单的可以考虑再统一一下三字词词频，甚至四字词词频。</del></p>
+           	<p>面试时候携带代码和结果来找 Hips Mentor 吧！</p>
+           	<a href="/static/img/hips4.PNG"><img src="/static/img/hips4.PNG" class="pic" width="100%"></a>
+           	<div class="checkbox disable">
+							<label>
+								<input type="checkbox" name="hips5" {% if hips['hips5'] %} checked {% endif %}>
+									勾选表示已经完成本题。
+							</label>
+						</div>
+          </div><!-- /.blog-post -->
+					<hr>
+					<div class="blog-post" style="padding-bottom:30px">
+            <h2 class="blog-post-title" id="web">WEB</h2>
+            <p class="blog-post-meta">终于让你看到我们的题了</p>
+						<p>Zejun 是站着喝酒而穿长衫的唯一的人。他身材很矮小；黑色脸色，皱纹间时常夹些油水；<del>一部乱蓬蓬的花白的没有胡子。穿的虽然是长衫，可是又脏又破，似乎十多年没有补，也没有洗。</del>他对人说话，总是 Clojure,Ruby,范式编程，教人半懂不懂的。Zejun 一到店，所有喝酒的人便都看着他笑，有的叫道，“Zejun，Clojure 还在支持 Java6 啊。”他不回答，对柜里说，“温两碗 82 年的 Java。”便排出九本华章大力士。他们又故意的高声嚷道，“你一定又偷看人家的书了！”Zejun 睁大眼睛说，“你怎么这样凭空污人清白……”“什么清白？我前天亲眼见你偷了 Ma 家的书，吊着打。”Zejun 便涨红了脸，额上的青筋条条绽出，争辩道，“偷看不能算偷……偷看！……MSCer 的事，能算偷看么？”接连便是难懂的话，什么“JVM 是最厉害的 VM”，什么“高阶函数，偏函数和函数组合才是核武器”之类，引得众人都哄笑起来：店内外充满了快活的空气。</p>
+						<p>WEB 的福利题很<del>简单</del>，很<del>有趣</del>，<a href="/web/1" target="_blank">所以你还不做？</a></p>
+          </div><!-- /.blog-post -->
+        </div><!-- /.blog-main -->
+        
+        <div class="col-sm-2 col-sm-offset-1" id="side-navbar">
+        	<ul class="nav nav-stacked nav-tabs" data-spy="affix" data-offset-top="0">
+						<li class="active"><a href="#tongyong">通用题</a></li>
+        		<li><a href="#acm">ACM</a></li>
+        		<li><a href="#app">APP</a></li>
+        		<li><a href="#game">GAME</a></li>
+        		<li><a href="#hips">HIPS</a></li>
+        		<li><a href="#web">WEB</a></li>
+        		<div><button type="submit" class="btn-default btn btn">提交 <i class="fa fa-check" aria-hidden="true"></i></button></div>
+        		<p><i class="fa fa-check"></i> 意为已经提交过，重复提交将会覆盖答案</p>
+        	</ul>
+        </div>   
+				</form>
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <div class="container">
+      	<div class="row">
+      		<div class="blog-footer-module col-sm-4">
+            <h4>了解更多</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://weibo.com/mstcinxdu?is_hot=1" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i>微博</a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-weixin" aria-hidden="true"></i>微信</a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-renren" aria-hidden="true"></i>人人</a></li>
+            </ol>
+          </div>
+          <div class="blog-footer-module col-sm-4">
+            <h4>关于我们</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="blog-footer-module col-sm-4">
+          	<img src="static/img/logo.PNG">
+          </div>
+				</div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="//v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="static/js/test.js"></script>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+/*
+ * Globals
+ */
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  color: #555;
+	position: relative;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #333;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  color: #cdddeb;
+	padding: 10px;
+}
+.blog-brand{
+	position: relative;
+  display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+	text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+	position: fixed;
+  margin: 0 -15px 15px;
+}
+
+.sidebar-item > a{
+	color: #767676;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.sidebar-item:hover,
+.sidebar-item:focus,
+.sidebar-module .active{
+	background-color: #fff;
+	display:block;
+	color: #563d7c;
+	font-size:20px;
+	font-weight: 600;
+	border-left: 2px solid #563d7c; 
+	padding: 10px;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #333;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+.blog-footer-module{
+	padding: 15px;
+}
+.blog-footer h4{
+	color:#fff;
+}
+.blog-footer a:hover{
+	color:#72b9ff;
+}
+.blog-footer img{
+	display: inline-block;
+	width: 50%;
+	
+}
+
+div#side-navbar{
+	padding-top: 105px;
+}
+
+ul.nav-tabs{
+		width: 140px;
+		margin-top: 20px;
+		border-radius: 0px;
+		border: 0px solid #ddd;
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li,{
+		margin: 0;
+		border-top: 0px solid #ddd;
+}
+ul.nav-tabs li:first-child{
+		border-top: none;
+}
+ul.nav-tabs li a{
+		margin: 0;
+		color: #bcbcbc;
+		padding: 8px 16px;
+		border-radius: 0;
+}
+ul.nav-tabs li.active a, 
+ul.nav-tabs li a:hover,
+ul.nav-tabs li.active a:hover {
+		color: #8650ff;
+		background: #fff;
+		font-size: 18px;
+		border-left: 1px solid #8650ff;
+		border-top: 0;
+		border-right: 0;
+		border-bottom: 1px solid #8650ff;
+}
+ul.nav-tabs li:first-child a,{
+		border-radius: 0 0 0 0;
+}
+ul.nav-tabs li:last-child a{
+		border-radius: 0 0 0 0;
+}
+ul.nav-tabs.affix{
+		top: 180px; /* Set the top position of pinned element */
+}
+
+ul.nav-tabs div{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+ul.nav-tabs button.btn,
+ul.nav-tabs p{
+	color: #bcbcbc;
+}
+ul.nav-tabs button.btn:hover,
+ul.nav-tabs button.btn:focus{
+	background-color: #9667ff;
+	color: #fff;
+	border: none;
+}
+
+
+img.pic{
+	display: block;
+	padding-bottom: 10px;
+}
+.blog-post h3.question{
+	padding-top: 15px;
+}
+.blog-post h3.question:first-child{
+	padding-top: none;
+}
+
+del{
+	text-decoration: line-through;
+}

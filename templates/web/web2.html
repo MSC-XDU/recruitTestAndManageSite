@@ -1,0 +1,26 @@
+{% extends "web/base.html" %}
+{% block content %}
+<div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="inner cover">
+            <h1 class="cover-heading">优秀的 MSCer <br> 不仅要显微知著 <br> 更要留意<strong>看不见</strong>的元素 </h1>
+            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            	<div class="form-group">
+									<div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
+										<input type="text" class="form-control" placeholder="找到线索，填入答案，获取下一步线索..." name="answer">
+									</div>
+								</div>
+                {% if error %}
+                        <p>再看看，检查检查...</p>
+                {% endif %}
+            <p class="lead">
+							<button type="submit" href="#" class="btn btn-lg btn-default">提交答案</button>
+            </p>
+            <p class="lead" style="display:none">{{ answer }}</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
