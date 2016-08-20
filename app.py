@@ -58,11 +58,11 @@ def login():
     try:
         u.login(username,password)
     except LeanCloudError as e:
+        message = ['text-danger',]
         if e.code == 210:
-            message = u"用户名/密码 错误"
+            message[1] = u"用户名/密码 错误"
         if e.code == 211:
-            message = u"不存在的用户"
-        print message,e.code
+            message[1] = u"不存在的用户"
         return render_template('login.html',message=message)
     r = redirect('/rockaroll')
     response = make_response(r)
@@ -337,5 +337,19 @@ def final():
         w.save()
         return """恭喜你!突破Web所有关卡!\n你可以浏览全部题目\nWeb Mentor 邮箱:a@dlmyb.com""",200
     return """error code""",400
+
+@app.route('/lost',methods=['GET','POST'])
+def lost():
+    email = request.form.get('email')
+    try:
+        leancloud.User().request_password_reset(email)
+    except LeanCloudError as e:
+        message = ['text-success',]
+        if e.code == 205:
+            message[1] = '错误的注册邮箱'
+            return render_template('lost.html',message=message)
+    message = ['text-success','申请重置密码成功！请检查你的邮箱...']
+    return render_template('login.html',message=message)
+
 if __name__ == '__main__':
     app.run(debug=True)

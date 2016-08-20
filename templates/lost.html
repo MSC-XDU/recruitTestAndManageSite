@@ -8,17 +8,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Web 福利题</title>
+    <title>Signin Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/static/css/cover.css" rel="stylesheet">
+    <link href="/static/css/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="/static/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/static/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,14 +28,26 @@
   </head>
 
   <body>
-  {% block content %}{% endblock %}
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <div class="container">
+			<div class="hidden-xs">
+				<form class="form-signin" action="/lost" enctype="multipart/form-data" method="post">
+					<h2 class="form-signin-heading">输入注册邮箱...</h2>
+                    {% if message %}
+					<p class="{{message[0]}}">{{message[1]|e}}</p>
+                    {% endif %}
+					<label class="sr-only">邮箱</label>
+					<input type="email" name="email" id="lost" class="form-control" placeholder="注册邮箱..." required autofocus>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
+				</form>
+				</div>
+				<div class="visible-xs">
+					<h1 class>请使用桌面端设备完成测试</h1>
+				</div>
+    </div> <!-- /container -->
+
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="/static/js/front.js"></script>
+    <script src="https://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
