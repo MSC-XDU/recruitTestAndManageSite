@@ -11,7 +11,7 @@ app = Flask(__name__)
 APP_ID = os.environ['LC_APP_ID']
 MASTER_KEY = os.environ['LC_APP_MASTER_KEY']
 
-leancloud.init(APP_ID,MASTER_KEY)
+leancloud.init(APP_ID,master_key=MASTER_KEY)
 
 def checkUserWeb(u):
     w = u.get('webpointer')
@@ -327,7 +327,7 @@ def final():
             return redirect('/')
     u.login()
     code = request.args.get('code')
-    if code == '271030':
+    if code == '2713':
         Q = leancloud.Query('weblog')
         w = Q.get(u.get('webpointer').id)
         w.set('passNum',4)
