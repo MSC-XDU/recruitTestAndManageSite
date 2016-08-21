@@ -30,20 +30,15 @@
   <body>
 
     <div class="container">
-			<div class="hidden-xs">
-				<form class="form-signin" action="/lost" enctype="multipart/form-data" method="post">
-					<h2 class="form-signin-heading">输入注册邮箱...</h2>
-                    {% if message %}
-					<p class="{{message[0]}}">{{message[1]|e}}</p>
-                    {% endif %}
-					<label class="sr-only">邮箱</label>
-					<input type="email" name="email" id="lost" class="form-control" placeholder="注册邮箱..." required autofocus>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
-				</form>
-				</div>
-				<div class="visible-xs">
-					<h1 class>请使用桌面端设备完成测试</h1>
-				</div>
+        <form class="form-signin" action="/lost{% if url %}?redirect={{ url }}{% endif %}" enctype="multipart/form-data" method="post">
+            <h2 class="form-signin-heading">输入注册邮箱...</h2>
+            {% if message %}
+            <p class="{{message[0]}}">{{message[1]|e}}</p>
+            {% endif %}
+            <label class="sr-only">邮箱</label>
+            <input type="email" name="email" id="lost" class="form-control" placeholder="注册邮箱..." required autofocus>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
+        </form>
     </div> <!-- /container -->
 
 

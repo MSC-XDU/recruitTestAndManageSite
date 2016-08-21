@@ -340,6 +340,7 @@ def final():
 
 @app.route('/lost',methods=['GET','POST'])
 def lost():
+    url = request.args.get('redirect')
     if request.method == 'POST':
         email = request.form.get('email')
         try:
@@ -349,10 +350,12 @@ def lost():
             if e.code == 205:
                 message.append('错误的注册邮箱')
                 return render_template('lost.html',message=message)
+        if url:
+            return redirect(url)
         message = ['text-success','申请重置密码成功！请检查你的邮箱...']
         return render_template('login.html',message=message)
     else:
-        return render_template('lost.html',message=[])
+        return render_template('lost.html',message=[],url=url)
 
 if __name__ == '__main__':
     app.run(debug=True)
