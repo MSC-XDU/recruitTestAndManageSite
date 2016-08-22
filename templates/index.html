@@ -407,13 +407,13 @@
             <p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件.</p>
             <p>填写答案: 二字词频最高的词是什么？三字词频最高的词是什么？四字词频最高的词？（如果词频有并列的，则将所有并列的内容填入文本框中）</p>
             <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
-            <div style="padding-bottom:10px">
+            <div style="padding:10px">
                 <input type="text" class="form-control" name="hips51" placeholder="二字频的词填这里" value="{% if hips['hips51'] %}{{ hips['hips51']|e }}{% endif %}">
             </div>
             <div style="padding:10px">
                 <input type="text" class="form-control" name="hips52" placeholder="三字频的词填这里" value="{% if hips['hips52'] %}{{ hips['hips52']|e }}{% endif %}">
             </div>
-            <div style="padding-top:10px">
+            <div style="padding:10px">
                 <input type="text" class="form-control" name="hips53" placeholder="四字频的词填这里" value="{% if hips['hips53'] %}{{ hips['hips53']|e }}{% endif %}">
             </div>
           </div><!-- /.blog-post -->
