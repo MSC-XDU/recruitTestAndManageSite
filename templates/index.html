@@ -270,7 +270,7 @@
             <p class="blog-post-meta">我是造轮子的小行家</p>
 						<h3 class="question">1.来我们继续来找图</h3>
 						<p><del>这题其实就是通用题第一题的进阶...</del></p>
-           	<p>来看图，使用你的各种本领来猜出以下图片的拍摄地点。</p>
+           	<p>猜地点，并写出给出的四张照片的拍摄地点，越具体越好，可写经纬度坐标和具体省市区县及街道文字名称，找不到位置信息则填“无”，鼓励以多种方式得出结论。并且写出你能从每一张照片中发现的个人隐私信息，越多越好。而且鼓励从照片中挖掘出更多的信息。</p>
            	<div class="row">
 							<div class="col-xs-5">
 								<a href="/static/img/hips1.jpg" target="_blank"><img src="/static/img/hips1.jpg" class="pic" width="100%"></a>
@@ -298,8 +298,8 @@
            			<textarea type="text" class="form-control" rows="6" placeholder="...Hips 的学长真是残暴..." name="hips3">{% if hips['hips3'] %}{{ hips['hips3']|e }}{% endif %}</textarea>
            		</div>
            	</div>
-           	<h3 class="question">2.找规律{% if hips['hips4'] %}<i class="fa fa-check"></i>{% endif %}</h3>
-           	<p>存在函数 f(x,y)，请通过以下几个等式找到 f(x,y) 的表达式。</p>
+           	<h3 class="question">2.找规律</h3>
+           	<p>2.1 存在函数 f(x,y)，请通过以下几个等式找到 f(x,y) 的表达式。{% if hips['hips4'] %}<i class="fa fa-check"></i>{% endif %}</p>
            	<table class="table table-striped table-bordered">
            		<thead>
            			<tr>
@@ -342,17 +342,77 @@
            		</tbody>
            	</table>
            	<textarea type="text" class="form-control" rows="3" placeholder="除了四则运算还会有什么？？？..." name="hips4">{% if hips['hips4'] %}{{ hips['hips4']|e }}{% endif %}</textarea>
-           	<h3 class="question">3.统计词频</h3>
-           	<p>统一下图中二字词词频，不考虑这个词是否具有含义，即标点符号也算作一个字符。</p>
-           	<p><del>觉得很简单的可以考虑再统一一下三字词词频，甚至四字词词频。</del></p>
-           	<p>面试时候携带代码和结果来找 Hips Mentor 吧！</p>
+            <p>2.2 存在一元一次函数 <strong>y = f(x) = a*x+b</strong> ,数据如下,请寻找与数据最拟合的函数,写出 a,b 值 (精确至四位小数).{% if hips['hips21'] or hips['hips22'] %}<i class="fa fa-check"></i>{% endif %}</p>
+			<table class="table table-striped table-bordered">
+           		<thead>
+           			<tr>
+						<td>x</td>
+						<td>y</td>
+					</tr>
+				</thead>
+           		<tbody>
+           			<tr>
+           				<td>1</td>
+           				<td>1.2</td>
+           			</tr>
+           			<tr>
+           				<td>2</td>
+           				<td>2.2</td>
+           			</tr>
+           			<tr>
+           				<td>3</td>
+           				<td>3.7</td>
+           			</tr>
+           			<tr>
+           				<td>4</td>
+           				<td>4.3</td>
+           			</tr>
+           			<tr>
+           				<td>5</td>
+           				<td>5.0</td>
+           			</tr>
+           			<tr>
+           				<td>6</td>
+           				<td>6.1</td>
+           			</tr>
+					<tr>
+						<td>7</td>
+						<td>7.7</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>8.6</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>8.9</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>10.0</td>
+					</tr>
+           		</tbody>
+           	</table>
+			<div class="form-group" style="padding-bottom:20px">
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="hips21" placeholder="这里写 a ..." value="{% if hips['hips21'] %}{{ hips['hips21']|e }}{% endif %}">
+				</div>
+				<div class="col-sm-5 col-sm-offset-2">
+					<input type="text" class="form-control" name="hips22" placeholder="这里写 b ..." value="{% if hips['hips22'] %}{{ hips['hips22']|e }}{% endif %}">
+				</div>
+			</div>
+            <h3 class="question">3.统计词频 {% if hips['hips51'] or hips['hips52'] %}<i class="fa fa-check"></i>{% endif %}</h3>
+           	<p>统计词频: 先将给出的图片使用微软认知服务 <a href="https://www.microsoft.com/cognitive-services/" target="_blank">https://www.microsoft.com/cognitive-services/</a> 中计算机视觉APIs包含的文字识别工具转换成文本，确认识别无误后粘贴到下面的文本框中解锁要使用的工具(代码)，该工具包含C#/VB.NET/Java/Python四种编程语言的源代码，使用任意一种运行，根据结果把所需要的答案填入文本框中。</p>
+           	<p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件，根据这些文件将正确答案填入文本框中.</p>
            	<a href="/static/img/hips4.PNG"><img src="/static/img/hips4.PNG" class="pic" width="100%"></a>
-           	<div class="checkbox disable">
-							<label>
-								<input type="checkbox" name="hips5" {% if hips['hips5'] %} checked {% endif %}>
-									勾选表示已经完成本题。
-							</label>
-						</div>
+           	{% if hips['hips5'] %}
+                <textarea type="text" class="form-control" rows="6" placeholder="键入图片内容..." name="hips51">{% if hips['hips51'] %}{{ hips['hips51']|e }}{% endif %}</textarea>
+            {% else %}
+                <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
+                <textarea type="text" class="form-control" rows="6" placeholder="代码运行结果..." name="hips52">{% if hips['hips52'] %}{{ hips['hips52']|e }}{% endif %}</textarea>
+            {% endif %}
+
+
           </div><!-- /.blog-post -->
 					<hr>
 					<div class="blog-post" style="padding-bottom:30px">

@@ -227,7 +227,7 @@ def submit():
     acmList = ['acm%d'%i for i in range(1,4)]
     appList = ['app%d'%i for i in range(1,4)]
     gameList = ['game%d'%i for i in range(1,4)]
-    hipsList = ['hips%d'%i for i in range(1,6)]
+    hipsList = ['hips%d'%i for i in range(1,5),'hips21','hips22','hips5','hips51','hips52']
 
     # 通用题解决方案
     try:
@@ -305,12 +305,16 @@ def submit():
     except IndexError:
         hips = leancloud.Object.extend('hipsLog')
         h = hips()
-    for i in hipsList[:-1]:
+    for i in hipsList[:-3]:
         h.set(i,request.form.get(i))
-    if request.form.get(hipsList[-1]) == 'on':
-        h.set('hips5',True)
+    if h.get('hips5'):
+        h.set('hips52',request.form.get('hips52'))
     else:
-        h.set('hips5',False)
+        h.set('hips51',request.form.get('hips51'))
+    test_string = '''据杨广文介绍，该机房的面积约1000平方米，三组机柜是以0、1、0的顺序摆放，其中两个“0”是由每组20个机舱组成的运算设备，中间的“1”是由8个机舱构成的网络设备(用来实现处理单元的互联互通)，一共加起来是48个机舱。记者提出，机柜之所以以“0、1、0”的顺序摆放是不是因为计算机的代码就是由0和1组成的，杨广文说，主要是这方面的考虑，当然也同时考虑空间的充分利用和布局的整体效果。
+工作人员随机打开一个机舱，看起来很像一个宽体式家用双开门冰箱，而里面排列着密密麻麻的运算单元则很像抽拉式档案柜。据介绍，每个机舱里面有4组超节点，每组超节点有32块运算插件板，每个插件板上有8个CPU，而这8个CPU的运算能力就可以达到每秒25万亿以上，所以一个机舱的运算能力是3.2千万亿次，相当于“神威蓝光”整体运算能力的3.2倍。记者又走到机柜的后面，看到这些运算设备除了连接着大量网线外，每组运算单元上都接着两根水管，据介绍，这是用来冷却运算设备的重要组成部分，而这一水冷技术是“神威系列”超算的一大特点，它可以充分保证对高速运转芯片的降温效果，这一技术对于未来中国研制下一代百亿亿次级超算也将带来巨大的帮助，因为百亿亿次级超算高速运转产生的热量可以通过这种方式很好地降温。'''
+    if request.form.get('hips51') == test_string:
+        h.set('hips5',True)
     h.set('user',u)
     h.set('email',u.get('email'))
     h.save()
