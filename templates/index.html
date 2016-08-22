@@ -405,7 +405,7 @@
            	<p>统计词频: 先将给出的图片使用微软认知服务 <a href="https://www.microsoft.com/cognitive-services/" target="_blank">https://www.microsoft.com/cognitive-services/</a> 中计算机视觉APIs包含的文字识别工具转换成文本，确认识别无误后粘贴到下面的文本框中解锁要使用的工具(代码)，该工具包含C#/VB.NET/Java/Python四种编程语言的源代码，使用任意一种运行，根据结果把所需要的答案填入文本框中。</p>
            	<p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件，根据这些文件将正确答案填入文本框中.</p>
            	<a href="/static/img/hips4.PNG"><img src="/static/img/hips4.PNG" class="pic" width="100%"></a>
-           	{% if hips['hips5'] %}
+           	{% if not hips['hips5'] %}
                 <textarea type="text" class="form-control" rows="6" placeholder="键入图片内容..." name="hips51">{% if hips['hips51'] %}{{ hips['hips51']|e }}{% endif %}</textarea>
             {% else %}
                 <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
