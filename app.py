@@ -49,7 +49,7 @@ def index():
             return render_template('login.html',message=message)
         if e.code == 211:
             message.append('不存在的用户')
-            return render_template('login.html')
+            return render_template('login.html',message=message)
     return redirect('/rockaroll')
 
 @app.route('/login',methods=['GET','POST'])
