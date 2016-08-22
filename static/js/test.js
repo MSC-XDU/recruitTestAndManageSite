@@ -349,3 +349,8 @@
 		});
 	});
 })(window.jQuery);
+
+$('#logout').on('click', function () {
+	document.cookie = 'token = ;MAX-AGE=0';
+	location.reload();
+});

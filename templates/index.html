@@ -33,8 +33,8 @@
     <div class="blog-masthead hidden-xs">
       <div class="container">
         <nav id="navbar" class="blog-nav">
-					<a class="blog-brand"><img src="static/img/logo.PNG" height="30px"></a>
-          <a class="blog-nav-item navbar-right" href="#">{{ email }}</a>
+					<a class="blog-brand"><img src="/static/img/logo.PNG" height="30px"></a>
+          <a class="blog-nav-item navbar-right" id="logout" href="javascipt:void(0)">{{ email }}</a>
         </nav>
       </div>
     </div>
@@ -401,14 +401,21 @@
 					<input type="text" class="form-control" name="hips22" placeholder="这里写 b ..." value="{% if hips['hips22'] %}{{ hips['hips22']|e }}{% endif %}">
 				</div>
 			</div>
-            <h3 class="question">3.统计词频 {% if hips['hips51'] or hips['hips52'] %}<i class="fa fa-check"></i>{% endif %}</h3>
+            <h3 class="question">3.统计词频 {% if hips['hips51'] or hips['hips52'] or hips['hips53'] %}<i class="fa fa-check"></i>{% endif %}</h3>
            	<p>先将给出的图片使用微软认知服务 <a href="https://www.microsoft.com/cognitive-services/" target="_blank">https://www.microsoft.com/cognitive-services/</a> 中计算机视觉APIs包含的文字识别工具转换成文本，确认识别无误后使用提供的代码工具，该工具包含C#/VB.NET/Java/Python四种编程语言的源代码，使用任意一种运行，根据结果把所需要的答案填入文本框中。</p>
            	<a href="/static/img/hips4.PNG"><img src="/static/img/hips4.PNG" class="pic" width="100%"></a>
-            <p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件，根据这些文件将正确答案填入文本框中.</p>
+            <p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件.</p>
+            <p>填写答案: 二字词频最高的词是什么？三字词频最高的词是什么？四字词频最高的词？（如果词频有并列的，则将所有并列的内容填入文本框中）</p>
             <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
-            <textarea type="text" class="form-control" rows="6" placeholder="代码运行结果..." name="hips5">{% if hips['hips5'] %}{{ hips['hips5']|e }}{% endif %}</textarea>
-
-
+            <div style="padding-bottom:10px">
+                <input type="text" class="form-control" name="hips51" placeholder="二字频的词填这里" value="{% if hips['hips51'] %}{{ hips['hips51']|e }}{% endif %}">
+            </div>
+            <div style="padding:10px">
+                <input type="text" class="form-control" name="hips52" placeholder="三字频的词填这里" value="{% if hips['hips52'] %}{{ hips['hips52']|e }}{% endif %}">
+            </div>
+            <div style="padding-top:10px">
+                <input type="text" class="form-control" name="hips53" placeholder="四字频的词填这里" value="{% if hips['hips53'] %}{{ hips['hips53']|e }}{% endif %}">
+            </div>
           </div><!-- /.blog-post -->
 					<hr>
 					<div class="blog-post" style="padding-bottom:30px">
@@ -449,7 +456,7 @@
          </div>
       		<div class="col-sm-4">
           	<div style="padding-top:20px">
-          		<img src="static/img/logo.PNG" width="100%">
+          		<img src="/static/img/logo.PNG" width="100%">
           	</div>
           </div>
           <div class="col-sm-4">

@@ -143,7 +143,7 @@ def rock():
         pass
     try:
         HIPS = q5.equal_to('email',email).find()[0]
-        hips['hips1'] = hips['hips2'] = hips['hips3'] = hips['hips4'] = hips['hips5'] = hips['hips21'] = hips['hips22'] = hips['hips51'] = hips['hips52'] =  None
+        hips['hips1'] = hips['hips2'] = hips['hips3'] = hips['hips4'] = hips['hips21'] = hips['hips22'] = hips['hips51'] = hips['hips52'] = hips['hips53'] =  None
         for i in hips.keys():
             hips[i] = HIPS.get(i)
     except LeanCloudError:
@@ -227,7 +227,7 @@ def submit():
     acmList = ['acm%d'%i for i in range(1,4)]
     appList = ['app%d'%i for i in range(1,4)]
     gameList = ['game%d'%i for i in range(1,4)]
-    hipsList = ['hips%d'%i for i in range(1,5)]+['hips21','hips22','hips5']
+    hipsList = ['hips%d'%i for i in range(1,5)]+['hips21','hips22','hips51','hips52','hips53']
 
     # 通用题解决方案
     try:
