@@ -61,7 +61,7 @@
                                 <i class="fa fa-check right"></i>
                             {% endif %}
                         </h3>
-						<p>在 <del>Ruby</del> 所有 OOP 语言中，所有类的类型是 Class , Object 是类，所以 Object 是 Class 的一个实例；但是，所有类最终继承自 Object , Class 是类，所以 Class 继承自 Object。</p>
+						<p>在 <del>Ruby</del> 某些 OOP 语言中，所有类的类型是 Class , Object 是类，所以 Object 是 Class 的一个实例；但是，所有类最终继承自 Object , Class 是类，所以 Class 继承自 Object。</p>
 						<p>请根据自己理解解释这段话的含义。</p>
 						<textarea type="text" class="form-control" rows="4" placeholder="欢迎生动而又逗逼的解释..." name="ty2">{% if ty['ty2'] %}{{ ty['ty2']|e }}{% endif %}</textarea>
 						<h3 id="ty3" class="question">
@@ -303,41 +303,41 @@
            	<table class="table table-striped table-bordered">
            		<thead>
            			<tr>
-									<td>f(x,y)</td>
 									<td>x</td>
 									<td>y</td>
+                                    <td>f(x,y)</td>
 								</tr>
 							</thead>
            		<tbody>
            			<tr>
-           				<td>1</td>
            				<td>8</td>
            				<td>9</td>
-           			</tr>
+           			    <td>1</td>
+                    </tr>
            			<tr>
-           				<td>8</td>
            				<td>4</td>
            				<td>12</td>
+                        <td>8</td>
            			</tr>
            			<tr>
-           				<td>86</td>
            				<td>25</td>
            				<td>79</td>
+                        <td>86</td>
            			</tr>
            			<tr>
-           				<td>73</td>
            				<td>100</td>
            				<td>45</td>
+                        <td>73</td>
            			</tr>
            			<tr>
-           				<td>384</td>
            				<td>128</td>
            				<td>256</td>
+                        <td>384</td>
            			</tr>
            			<tr>
-           				<td>1000</td>
            				<td>899</td>
            				<td>107</td>
+                        <td>1000</td>
            			</tr>
            		</tbody>
            	</table>
@@ -402,15 +402,11 @@
 				</div>
 			</div>
             <h3 class="question">3.统计词频 {% if hips['hips51'] or hips['hips52'] %}<i class="fa fa-check"></i>{% endif %}</h3>
-           	<p>统计词频: 先将给出的图片使用微软认知服务 <a href="https://www.microsoft.com/cognitive-services/" target="_blank">https://www.microsoft.com/cognitive-services/</a> 中计算机视觉APIs包含的文字识别工具转换成文本，确认识别无误后粘贴到下面的文本框中解锁要使用的工具(代码)，该工具包含C#/VB.NET/Java/Python四种编程语言的源代码，使用任意一种运行，根据结果把所需要的答案填入文本框中。</p>
-           	<p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件，根据这些文件将正确答案填入文本框中.</p>
+           	<p>先将给出的图片使用微软认知服务 <a href="https://www.microsoft.com/cognitive-services/" target="_blank">https://www.microsoft.com/cognitive-services/</a> 中计算机视觉APIs包含的文字识别工具转换成文本，确认识别无误后使用提供的代码工具，该工具包含C#/VB.NET/Java/Python四种编程语言的源代码，使用任意一种运行，根据结果把所需要的答案填入文本框中。</p>
            	<a href="/static/img/hips4.PNG"><img src="/static/img/hips4.PNG" class="pic" width="100%"></a>
-           	{% if not hips['hips5'] %}
-                <textarea type="text" class="form-control" rows="6" placeholder="键入图片内容..." name="hips51">{% if hips['hips51'] %}{{ hips['hips51']|e }}{% endif %}</textarea>
-            {% else %}
-                <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
-                <textarea type="text" class="form-control" rows="6" placeholder="代码运行结果..." name="hips52">{% if hips['hips52'] %}{{ hips['hips52']|e }}{% endif %}</textarea>
-            {% endif %}
+            <p>工具使用说明: 根据代码中的目录将识别后的文件存到该目录下，并命名成所需的文件名，然后运行，会生成二字词频，三字词频和四字词频文件，根据这些文件将正确答案填入文本框中.</p>
+            <p>工具代码链接<a href="/static/tool.cs" target="_blank">C#</a> <a href="/static/tool.vb" target="_blank">VB.NET</a> <a href="/static/tool.java" target="_blank">Java</a> <a href="/static/tool.py" target="_blank">Python</a></p>
+            <textarea type="text" class="form-control" rows="6" placeholder="代码运行结果..." name="hips5">{% if hips['hips5'] %}{{ hips['hips5']|e }}{% endif %}</textarea>
 
 
           </div><!-- /.blog-post -->
