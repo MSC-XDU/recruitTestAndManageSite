@@ -313,7 +313,7 @@ def submit():
 
     return redirect('/rockaroll')
 
-@app.route('/final',methods=['POST'])
+@app.route('/final',methods=['GET'])
 def final():
     token = request.cookies.get('token')
     if not token:
