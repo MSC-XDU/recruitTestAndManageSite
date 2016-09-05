@@ -29,25 +29,22 @@
 
   <body>
 
-    <div class="container hidden-xs">
-				<form class="form-signin" action="/login" enctype="multipart/form-data" method="post">
-					<h2 class="form-signin-heading">请登录...</h2>
-					{% if message %}
-					<p class="{{message[0]}}">{{ message[1] }}</p>
-					{% endif %}
-					<label for="inputEmail" class="sr-only">邮箱</label>
-					<input type="email" name="email" id="inputEmail" class="form-control" placeholder="注册邮箱..." required autofocus>
-					<label for="inputPassword" class="sr-only">密码</label>
-					<input type="password" name="pass" id="inputPassword" class="form-control" placeholder="密码..." required>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-					{% if message[0] == 'text-danger' %}
-					<p style="padding-top:10px;"><a href="/lost">没有注册？</a> <a href="/lost">忘记密码？</a></p>
-					{% endif %}
-				</form>
-				</div>
-				<div class="visible-xs">
-					<h1 class>请使用桌面端设备完成测试</h1>
-				</div>
+    <div class="container">
+      <form class="form-signin" action="/login" enctype="multipart/form-data" method="post">
+          <h2 class="form-signin-heading">请登录...</h2>
+          {% if message %}
+          <p class="{{message[0]}}">{{ message[1] }}</p>
+          {% endif %}
+          <label for="inputEmail" class="sr-only">邮箱</label>
+          <input type="email" name="email" id="inputEmail" class="form-control" placeholder="注册邮箱..." required autofocus>
+          <label for="inputPassword" class="sr-only">密码</label>
+          <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="密码..." required>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+          {% if message[0] == 'text-danger' %}
+          <p style="padding-top:10px;"><a href="/lost">没有注册？</a> <a href="/lost">忘记密码？</a></p>
+          {% endif %}
+      </form>
+      </div>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
