@@ -388,7 +388,6 @@ def indexAdmin():
 @app.route('/admin/search')
 def search():
     string = request.args.get('s')
-    print string
     token = request.cookies.get('token')
     if not token:
         return redirect('/')
@@ -423,9 +422,32 @@ def search():
         count = len(result)
     return render_template('dep2.html',result=result,count=count)
 
-@app.route('/admin/department')
+@app.route('/admin/department',methods=['GET','POST'])
 def department():
-    pass
+    token = request.cookies.get('token')
+    if not token:
+        return redirect('/')
+    u = leancloud.User()
+    try:
+        u.become(token)
+    except LeanCloudError as e:
+        if e.code == 211:
+            return redirect('/')
+    u.login()
+    if not u.get('isAuth'):
+        return redirect('/')
+    if request.method == 'GET':
+        result = leancloud.Query.do_cloud_query("select * from SignUp where sex='男' or sex='女'").results
+        count = len(result)
+        return render_template('dep3.html',result=result,count=count)
+    else:
+        dp = request.form.get('department')
+        T = leancloud.Object.extend('SignUp')
+        q = T.query
+        q.equal_to('department',dp)
+        result = q.find()
+        count = len(result)
+        return render_template('dep3.post.html',result=result,count=count)
 
 @app.route('/admin/profile?username=<username>')
 def personProfile(username):
@@ -433,7 +455,7 @@ def personProfile(username):
 
 @app.route('/test')
 def test():
-    return render_template('dep2.html')
+    return render_template('dep3.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

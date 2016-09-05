@@ -1,0 +1,13 @@
+<div class="resultList">
+    <h2>查询结果: {{ count }} 人</h2>
+    <div class="list-group">
+        {% for user in result %}
+        <a href="/admin/profile?username={{user.get('username')|e}}" class="list-group-item">
+            <h3 class="list-group-item-heading">姓名: {{user.get('name')|e}}</h3>
+            <h4>电话: {{user.get('mobilePhoneNumber')}}</h4>
+            <h4>邮箱: {{user.get('email')}}</h4>
+            <h4>预报部门: {{user.get('department')|e}}</h4>
+        </a>
+        {% endfor %}
+    </div>
+</div>

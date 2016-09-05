@@ -30,20 +30,18 @@
   <!-- start -->
   <div class="container">
 		<div class="header">
-			<div class="header">
-				<nav class="navbar navbar-default">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">首页</a></li>
-						<li><a href="#">部门汇总</a></li>
-					</ul>
-					<div class="navbar-form navbar-right">
-						<div class="form-group">
-							 <input type="text" class="form-control" placeholder="电话,邮箱,姓名,QQ...">
-						</div>
-						<button class="btn btn-default">查询</button>
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="/admin/department">部门汇总</a></li>
+				</ul>
+				<div class="navbar-form navbar-right">
+					<div class="form-group">
+						 <input type="text" class="form-control" placeholder="电话,邮箱,姓名,QQ...">
 					</div>
-				</nav>
-			</div>
+					<button class="btn btn-default" id="check">查询</button>
+				</div>
+			</nav>
 		</div><!-- header -->
 		<div class="main">
 			<h1>XDMSC 2016 招新汇总表</h1>
@@ -135,14 +133,10 @@
 			$(function(){
 				$.plot("#devsd1",allData,opinions);
 				$.plot("#devsd2",techData,opinions);
-				$("button").click(function () {
-					var value = $("input").val();
-					var url = "/admin/search?s="+value;
-					window.location = url
-				})
 			})
 		</script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="/static/js/dep.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="//v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="/static/js/jquery.flot.js"></script>
