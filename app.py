@@ -370,7 +370,7 @@ def lost():
 def indexAdmin():
     token = request.cookies.get('token')
     if not token:
-        return """为什么不尝试登陆呢?""",400
+        return redirect('/')
     u = leancloud.User()
     try:
         u.become(token)
@@ -385,6 +385,55 @@ def indexAdmin():
     resultNum = i.get('result')
     return render_template('dep.html',resultNum=resultNum)
 
+@app.route('/admin/search')
+def search():
+    string = request.args.get('s')
+    print string
+    token = request.cookies.get('token')
+    if not token:
+        return redirect('/')
+    u = leancloud.User()
+    try:
+        u.become(token)
+    except LeanCloudError as e:
+        if e.code == 211:
+            return redirect('/')
+    u.login()
+    if not u.get('isAuth'):
+        return redirect('/')
+    if string:
+        T = leancloud.Object.extend('SignUp')
+        q1 = T.query;q2 = T.query
+        q1.equal_to('sex','男');q2.equal_to('sex','女')
+        s1 = leancloud.Query.or_(q1,q2)
+        s2 = T.query;s3 = T.query;s4 = T.query
+        result = leancloud.Query.or_(
+            leancloud.Query.and_(s2.contains('name',string),s1),
+            leancloud.Query.and_(s3.contains('mobilePhoneNumber',string),s1),
+            leancloud.Query.and_(s4.contains('email',string),s1)
+        )
+        result = result.find()
+        map(lambda x:x.fetch(),result)
+        count = len(result)
+    else:
+        q = leancloud.Query.do_cloud_query(
+            "select * from SignUp where sex='男' or sex='女'"
+        )
+        result = q.results
+        count = len(result)
+    return render_template('dep2.html',result=result,count=count)
+
+@app.route('/admin/department')
+def department():
+    pass
+
+@app.route('/admin/profile?username=<username>')
+def personProfile(username):
+    pass
+
+@app.route('/test')
+def test():
+    return render_template('dep2.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

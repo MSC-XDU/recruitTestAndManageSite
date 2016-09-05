@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="dlmyb">
+
+    <title>MSC report</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		
+    <!-- Custom styles for this template -->
+    <!--<link href="static/css/blog.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="//v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <!-- start -->
+  <div class="container">
+		<div class="header">
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li><a href="/admin">首页</a></li>
+					<li><a href="#">部门汇总</a></li>
+				</ul>
+				<div class="navbar-form navbar-right">
+					<div class="form-group">
+						 <input type="text" class="form-control" placeholder="电话,邮箱,姓名,QQ...">
+					</div>
+					<button class="btn btn-default">查询</button>
+				</div>
+			</nav>
+		</div><!-- header -->
+		<div class="main">
+			<h1>查询结果...</h1>
+			<p class="lead">符合结果的有 {{count}} 人</p>
+			<div class="resultList">
+				<div class="list-group">
+					{% for user in result %}
+					<a href="/admin/profile?username={{user.get('username')|e}}" class="list-group-item">
+						<h3 class="list-group-item-heading">姓名: {{user.get('name')|e}}</h3>
+						<h4>电话: {{user.get('mobilePhoneNumber')}}</h4>
+						<h4>邮箱: {{user.get('email')}}</h4>
+						<h4>预报部门: {{user.get('department')|e}}</h4>
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div><!-- main -->
+  </div>
+  <!-- end -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  	<script type="application/javascript">
+		$(
+			$("button").click(function () {
+				var value = $("input").val();
+				var url = "/admin/search?s="+value;
+				window.location = url
+			})
+		);
+	</script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="//v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/static/js/test.js"></script>
+  </body>
+</html>
