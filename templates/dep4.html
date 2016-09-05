@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="dlmyb">
+
+    <title>MSC report</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="static/css/blog.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="//v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- start -->
+<div class="container">
+    <div class="header">
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li><a href="/admin">首页</a></li>
+					<li><a href="/admin/department">部门汇总</a></li>
+				</ul>
+				<div class="navbar-form navbar-right">
+					<div class="form-group">
+						 <input type="text" class="form-control" placeholder="电话,邮箱,姓名,QQ...">
+					</div>
+					<button class="btn btn-default" id="check">查询</button>
+				</div>
+			</nav>
+		</div><!-- header -->
+    <div class="main">
+        <h3>基本信息</h3>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>姓名</th>
+                    <td>{{user.get('name')|e}}</td>
+                    <th>性别</th>
+                    <td>{{user.get('sex')|e}}</td>
+                    <th>民族</th>
+                    <td>{{user.get('national')|e}}</td>
+                </tr>
+                <tr>
+                    <th>生日</th>
+                    <td>{{user.get('birthday')|e}}</td>
+                    <th>毕业地</th>
+                    <td>{{user.get('home')|e}}</td>
+                    <th>专业</th>
+                    <td>{{info.get('major')|e}}</td>
+                </tr>
+                <tr>
+                    <th>电话{% if not info.get('mobilePhoneVerified') %}<a href="#" class="question"><i class="fa fa-question"></i></a>{% endif %}</th>
+                    <td>{{user.get('mobilePhoneNumber')|e}}</td>
+                    <th>邮箱{% if not info.get('emailVerified') %}<a href="#" class="question"><i class="fa fa-question"></i></a>{% endif %}</th>
+                    <td>{{user.get('email')|e}}</td>
+                    <th>QQ</th>
+                    <td>{{info.get('qq')|e}}</td>
+                </tr>
+                <tr>
+                    <th>所报部门</th>
+                    <td>{{user.get('department')|e}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>自由发挥</h3>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th width="10%" style="vertical-align: middle;text-align: center">个人介绍</th>
+                    <td>{{user.get('intro')|e}}</td>
+                </tr>
+                <tr>
+                    <th width="10%" style="vertical-align: middle;text-align: center">特长爱好</th>
+                    <td>{{user.get('skills')|e}}</td>
+                </tr>
+                <tr>
+                    <th width="10%" style="vertical-align: middle;text-align: center">曾获奖项</th>
+                    <td>{{user.get('achievement')|e}}</td>
+                </tr>
+                <tr>
+                    <th width="10%" style="vertical-align: middle;text-align: center">对俱乐部的看法</th>
+                    <td>{{user.get('opinion')}}</td>
+                </tr>
+                <tr>
+                    <th width="10%" style="vertical-align: middle;text-align: center">上传文件</th>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>福利题报告</h3>
+        <p><a href="/report?id={{info.id}}" target="_blank">点此进入</a></p>
+        <div class="footer" style="padding-bottom: 100px;">
+            <h3>负责人最终决定</h3>
+            {% if info.get("passed_first") %}
+            <p class="text-success">该萌新已经成为 {{user.get('department')|e}} 部员</p>
+            {% endif %}
+            {% if status %}
+            <div class="row" style="padding-bottom: 20px">
+                <div class="col-xs-5" id="firstchoice">
+                    <select class="form-control" id="final">
+                        <option value="NULL">选择...</option>
+                        <option value="reject">reject</option>
+                        <option value="recommand">推荐给其它部门</option>
+                        <option value="accept">通过面试</option>
+                    </select>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-primary" id="submit">提交</button>
+                </div>
+                <div class="hidden" id="process">
+                    <p class="text-primary">正在提交...</p>
+                </div>
+                <div class="hidden" id="success">
+                    <p class="text-success">提交成功!  </p>
+                </div>
+            </div>
+            {% else %}
+            <p class="text-muted">{{user.get('department')|e}} mentor 才能进行操作</p>
+            {% endif %}
+        </div>
+    </div><!-- main -->
+</div>
+<!-- end -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('#final').on('change',function(){
+            var selectValue = $("#final").val();
+                if (selectValue == 'recommand') {
+                    $("#firstchoice").after("<div class=\"col-xs-5\" id=\"addition\">" +
+                        "<select class=\"form-control\" id=\"department\">" +
+                        "<option value='NULL'>选择...</option>" +
+                        "<option>传媒部-平面设计组</option>" +
+                        "<option>传媒部-影像视讯组</option>" +
+                        "<option>活动部</option>" +
+                        "<option>联络部</option>" +
+                        "<option>技术部-ACM组</option>" +
+                        "<option>技术部-APP组</option>" +
+                        "<option>技术部-Game组</option>" +
+                        "<option>技术部-实用工具组</option>" +
+                        "<option>技术部-Web组</option>" +
+                        "</select>" +
+                        "</div>"
+                    )
+                    $("select#final").after("<p class=\"text-danger\" id=\"addition\">注意:一旦推荐,无法再对该成员进行操作。</p>")
+                }
+                else
+                    {
+                        $("#addition").remove();
+                        $("#addition").remove()
+                    }
+            });
+        $("button#submit").popover(
+            {
+                content: function () {
+                    return $("div#process").html();
+                },
+                placement: "bottom",
+                html: true
+            });
+        $("button#submit").click(function () {
+            var finalurl = "/admin/profile?id={{id}}";
+            $.ajax({
+                type: "post",
+                url: finalurl,
+                data: { "choice":$("#final option:selected").val(),
+                        "department":$("#department option:selected").val()
+                },
+                success: function () {
+                        $("div.popover-content").html(
+                                $("div#success").html()
+                        );
+                    }
+                })
+            });
+       })
+</script>
+<script src="/static/js/dep.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="//v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

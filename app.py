@@ -164,7 +164,7 @@ def rock():
     except IndexError:
         pass
 
-    return render_template('index.html',ty=ty,acm=acm,langList=langList,app=app,game=game,hips=hips,email=email)
+    return render_template('index.html',ty=ty,acm=acm,langList=langList,app=app,game=game,hips=hips,email=email,status=True)
 
 @app.route('/web/<num>',methods=['GET','POST'])
 def webtest(num):
@@ -449,13 +449,135 @@ def department():
         count = len(result)
         return render_template('dep3.post.html',result=result,count=count)
 
-@app.route('/admin/profile?username=<username>')
-def personProfile(username):
-    pass
+@app.route('/admin/profile',methods=['GET','POST'])
+def personProfile():
+    obid = request.args.get('id')
+    token = request.cookies.get('token')
+    if not token:
+        return redirect('/')
+    u = leancloud.User()
+    try:
+        u.become(token)
+    except LeanCloudError as e:
+        if e.code == 211:
+            return redirect('/')
+    u.login()
+    if not u.get('isAuth'):
+        return redirect('/')
+    T = leancloud.Object.extend('SignUp')
+    q = T.query
+    user = q.get(obid)
+    t = user.get('user')
+    t.fetch()
+    if not user:
+        return redirect('/')
+    status = (u.get('dapartment') in user.get('department') or u.get('dapartment') == 'ALL') # dapartment 写错了懒得再改服务器字段了
+    if request.method == 'GET':
+        return render_template('/dep4.html',user=user,info=t,status=status,id=obid)
+    elif request.method == 'POST':
+        choice = request.form.get('choice')
+        department = request.form.get('department')
+        user.fetch()
+        if choice == 'recommand':
+            if status or department == "NULL":
+                print u.get('dapartment')
+                abort(500)
+            user.set("department",department)
+        elif choice == 'pass':
+            user.set("pass_first",True)
+        elif choice == 'reject':
+            user.set("pass_first",False)
+        else:
+            abort(500)
+        user.save()
+        return "ok"
 
-@app.route('/test')
-def test():
-    return render_template('dep3.html')
+@app.route('/report')
+def report():
+    obid = request.args.get('id')
+    token = request.cookies.get('token')
+    if not token:
+        return redirect('/')
+    u = leancloud.User()
+    try:
+        u.become(token)
+    except LeanCloudError as e:
+        if e.code == 211:
+            return redirect('/')
+    u.login()
+    if not u.get('isAuth'):
+        return redirect('/')
+    q = leancloud.Query('_leancloud.User')
+    user = q.get(obid)
+    user.fetch()
+    email = user.get("email")
+
+    q1 = leancloud.Query('tyLog')
+    q2 = leancloud.Query('acmLog')
+    q3 = leancloud.Query('appLog')
+    q4 = leancloud.Query('gameLog')
+    q5 = leancloud.Query('hipsLog')
+    ty = {};acm = {};app = {};game={};hips = {}
+    langList = ['C','C++','Java']
+
+    try:
+        TY = q1.equal_to('email',email).find()[0]
+        ty['ty1'] = ty['ty2'] = ty['ty3'] = ty['ty31'] = ty['ty32'] = ty['ty4'] = ty['ty5'] = None
+        for i in ty.keys():
+            ty[i] = TY.get(i)
+    except LeanCloudError:
+        pass
+    except IndexError:
+        pass
+    try:
+        ACM = q2.equal_to('email',email).find()[0]
+        lang = ACM.get('acmlanguage')
+        if not lang:
+            try:
+                langList.remove(lang)
+                langList = [lang,]+langList
+            except ValueError:
+                pass
+        acm['acm1'] = acm['acm2'] = acm['acm3'] = None
+        for i in acm.keys():
+            if ACM.get(i):
+                acm[i] = True
+    except LeanCloudError:
+        # network error
+        pass
+    except IndexError:
+        pass
+
+    try:
+        APP = q3.equal_to('email',email).find()[0]
+        app['app1'] = app['app2'] = app['app3'] = None
+        for i in app.keys():
+            app[i] = APP.get(i)
+    except LeanCloudError:
+        pass
+    except IndexError:
+        pass
+    try:
+        GAME = q4.equal_to('email',email).find()[0]
+        game['game1'] = game['game2'] = game['game3'] = None
+        for i in game.keys():
+            game[i] = GAME.get(i)
+    except LeanCloudError:
+        pass
+    except IndexError:
+        pass
+    try:
+        HIPS = q5.equal_to('email',email).find()[0]
+        hips['hips1'] = hips['hips2'] = hips['hips3'] = hips['hips4'] = hips['hips21'] = hips['hips22'] = hips['hips51'] = hips['hips52'] = hips['hips53'] =  None
+        for i in hips.keys():
+            hips[i] = HIPS.get(i)
+    except LeanCloudError:
+        pass
+    except IndexError:
+        pass
+
+    return render_template('index.html',ty=ty,acm=acm,langList=langList,app=app,game=game,hips=hips,email=email,status=False)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

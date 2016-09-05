@@ -434,8 +434,8 @@
         		<li><a href="#game">GAME</a></li>
         		<li><a href="#hips">HIPS</a></li>
         		<li><a href="#web">WEB</a></li>
-        		<div><button type="submit" class="btn-default btn btn">提交 <i class="fa fa-check" aria-hidden="true"></i></button></div>
-        		<p><i class="fa fa-check"></i> 意为已经提交过，重复提交将会覆盖答案</p>
+				{% if status %}<div><button type="submit" class="btn-default btn btn">提交 <i class="fa fa-check" aria-hidden="true"></i></button></div> {% endif %}
+				<p><i class="fa fa-check"></i> 意为已经提交过，重复提交将会覆盖答案</p>
         	</ul>
         </div>   
 				</form>

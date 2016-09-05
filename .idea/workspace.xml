@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179ce19d-06b8-4336-b7be-ba0f473ba38c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/dep.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/dep3.post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xdmsc.iml" afterPath="$PROJECT_DIR$/.idea/xdmsc.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep.html" afterPath="$PROJECT_DIR$/templates/dep.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dep.js" afterPath="$PROJECT_DIR$/static/js/dep.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep2.html" afterPath="$PROJECT_DIR$/templates/dep2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep3.html" afterPath="$PROJECT_DIR$/templates/dep3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep3.post.html" afterPath="$PROJECT_DIR$/templates/dep3.post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="xdmsc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,17 +41,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="443" column="43" selection-start-line="443" selection-start-column="43" selection-end-line="443" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.9373259">
+              <caret line="507" column="27" selection-start-line="507" selection-start-column="27" selection-end-line="507" selection-end-column="27" />
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
-                <marker date="1473070872000" expanded="true" signature="12727:12772" placeholder="select * fro..SignUp..." />
-                <marker date="1473070872000" expanded="true" signature="13368:13399" placeholder="select * fro..SignUp..." />
-                <marker date="1473070872000" expanded="true" signature="13368:13402" placeholder="select * fro..SignUp..." />
-                <marker date="1473070872000" expanded="true" signature="13368:13413" placeholder="select * fro..SignUp..." />
+                <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+                <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+                <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+                <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +60,8 @@
       <file leaf-file-name="dep3.post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -66,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/dep.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -75,8 +80,28 @@
       <file leaf-file-name="dep3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7843137">
-              <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+            <state vertical-scroll-proportion="-10.960784">
+              <caret line="60" column="48" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dep4.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dep4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-38.791668">
+              <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.529411">
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -85,18 +110,21 @@
       <file leaf-file-name="dep2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1372547">
-              <caret line="57" column="32" selection-start-line="50" selection-start-column="20" selection-end-line="57" selection-end-column="32" />
-              <folding />
+            <state vertical-scroll-proportion="-5.372549">
+              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+              <folding>
+                <marker date="1473071886000" expanded="true" signature="1359:1717" placeholder="..." />
+                <marker date="1473071886000" expanded="true" signature="1391:1474" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            <state vertical-scroll-proportion="-34.431374">
+              <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -112,39 +140,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dep.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dep.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49711815">
+            <state vertical-scroll-proportion="-6.7647057">
               <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cloud.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
-                <element signature="e#17#56#0" expanded="true" />
-                <marker date="1473053702000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-                <marker date="1473053702000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-                <marker date="1473053702000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-                <marker date="1473053702000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-                <marker date="1473053702000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
+                <marker date="1473071451000" expanded="true" signature="1320:1752" placeholder="..." />
+                <marker date="1473071451000" expanded="true" signature="1359:1743" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.041666">
-              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -178,16 +182,17 @@
         <option value="$PROJECT_DIR$/templates/lost.html" />
         <option value="$PROJECT_DIR$/static/js/test.js" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/cloud.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/dep2.html" />
-        <option value="$PROJECT_DIR$/templates/dep3.post.html" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/static/js/dep.js" />
-        <option value="$PROJECT_DIR$/templates/dep3.html" />
         <option value="$PROJECT_DIR$/templates/dep.html" />
+        <option value="$PROJECT_DIR$/templates/dep2.html" />
+        <option value="$PROJECT_DIR$/templates/dep3.html" />
+        <option value="$PROJECT_DIR$/templates/dep3.post.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/static/js/dep.js" />
+        <option value="$PROJECT_DIR$/templates/dep4.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -201,6 +206,25 @@
     <option name="y" value="23" />
     <option name="width" value="1401" />
     <option name="height" value="865" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>HtmlUnknownTarget</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -573,14 +597,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/lost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cloud.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -636,10 +652,10 @@
           <caret line="356" column="9" selection-start-line="356" selection-start-column="9" selection-end-line="356" selection-end-column="9" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473070872000" expanded="true" signature="12727:12772" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13399" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13402" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13413" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -737,10 +753,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473070872000" expanded="true" signature="12727:12772" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13399" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13402" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13413" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -788,10 +804,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473070872000" expanded="true" signature="12727:12772" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13399" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13402" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13413" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -928,37 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="115" selection-start-line="73" selection-start-column="115" selection-end-line="73" selection-end-column="115" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#2;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#4;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#4;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#5;n#div#4;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#6;n#div#4;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#form#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2941175">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cloud.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -998,32 +983,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dep2.html">
+    <entry file="file://$PROJECT_DIR$/templates/dep.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1372547">
-          <caret line="57" column="32" selection-start-line="50" selection-start-column="20" selection-end-line="57" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="-6.7647057">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding>
+            <marker date="1473071451000" expanded="true" signature="1320:1752" placeholder="..." />
+            <marker date="1473071451000" expanded="true" signature="1359:1743" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/dep2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="443" column="43" selection-start-line="443" selection-start-column="43" selection-end-line="443" selection-end-column="43" />
+        <state vertical-scroll-proportion="-5.372549">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
           <folding>
-            <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473070872000" expanded="true" signature="12727:12772" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13399" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13402" placeholder="select * fro..SignUp..." />
-            <marker date="1473070872000" expanded="true" signature="13368:13413" placeholder="select * fro..SignUp..." />
+            <marker date="1473071886000" expanded="true" signature="1359:1717" placeholder="..." />
+            <marker date="1473071886000" expanded="true" signature="1391:1474" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.529411">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1031,24 +1024,46 @@
     <entry file="file://$PROJECT_DIR$/static/js/dep.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dep3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7843137">
-          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+        <state vertical-scroll-proportion="-10.960784">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dep.html">
+    <entry file="file://$PROJECT_DIR$/templates/dep4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49711815">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        <state vertical-scroll-proportion="-38.791668">
+          <caret line="184" column="58" selection-start-line="184" selection-start-column="58" selection-end-line="184" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.431374">
+          <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9373259">
+          <caret line="507" column="27" selection-start-line="507" selection-start-column="27" selection-end-line="507" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#62#0" expanded="true" />
+            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+          </folding>
         </state>
       </provider>
     </entry>

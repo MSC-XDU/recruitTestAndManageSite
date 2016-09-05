@@ -20,4 +20,10 @@ $(
       $(".main").append(r.responseText)
         }
     })
-)
+);
+$(function() {
+    $('a.question').tooltip({
+        title: "未验证",
+        placement: "bottom"
+    })
+});
