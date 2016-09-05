@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="dlmyb">
+
+    <title>MSC report</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		
+    <!-- Custom styles for this template -->
+    <!--<link href="static/css/blog.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="//v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+		<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <!-- start -->
+  <div class="container">
+		<div class="header">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">部门汇总</a></li>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						 <input type="text" class="form-control" placeholder="电话？邮箱？姓名？...">
+					</div>
+					<button type="submit" class="btn btn-default">查询</button>
+				</form>
+			</ul>
+		</div><!-- header -->
+		<div class="main">
+			<h1>XDMSC 2016 招新汇总表</h1>
+			<div class="chart">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6">
+							<div id="devsd1"></div>
+							<p style="text-align:center">俱乐部人员分布</p>
+						</div>
+						<div class="col-xs-6">
+							<div id="devsd2"></div>
+							<p style="text-align:center">技术部人员分布</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="tablereport">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<th></th>
+						<th>技术部</th>
+						<th>活动部</th>
+						<th>传媒部</th>
+						<th>联络部</th>
+						<th>总和</th>
+					</thead>
+					<tbody>
+						<tr>
+							<th>人数(个)</th>
+							<td>{{resultNum['技术部-ACM组'][2] + resultNum['技术部-APP组'][2] + resultNum['技术部-Game组'][2] + resultNum['技术部-实用工具组'][2] + resultNum['技术部-Web组'][2]}}</td>
+							<td>{{resultNum['活动部'][2]}}</td>
+							<td>{{resultNum['传媒部-平面设计组'][2] + resultNum['传媒部-影像视讯组'][2]}}</td>
+							<td>{{resultNum['联络部'][2]}}</td>
+							<td>{{resultNum['all'][2]}}</td>
+						</tr>
+						<tr>
+							<th>男女比例</th>
+							<td>
+								{{resultNum['技术部-ACM组'][0] + resultNum['技术部-APP组'][0] + resultNum['技术部-Game组'][0] + resultNum['技术部-实用工具组'][0] + resultNum['技术部-Web组'][0]}}:
+								{{resultNum['技术部-ACM组'][1] + resultNum['技术部-APP组'][1] + resultNum['技术部-Game组'][1] + resultNum['技术部-实用工具组'][1] + resultNum['技术部-Web组'][1]}}
+							</td>
+							<td>
+								{{resultNum['活动部'][0]}}:{{resultNum['活动部'][1]}}
+							</td>
+							<td>
+								{{resultNum['传媒部-平面设计组'][0] + resultNum['传媒部-影像视讯组'][0]}}:{{resultNum['传媒部-平面设计组'][1] + resultNum['传媒部-影像视讯组'][1]}}
+							</td>
+							<td>{{resultNum['联络部'][0]}}:{{resultNum['联络部'][1]}}</td>
+							<td>{{resultNum['all'][0]}}:{{resultNum['all'][1]}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div><!-- main -->
+  </div>
+  <!-- end -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+			var allData = [
+				{ label: "技术部", data: {{resultNum['技术部-ACM组'][2] + resultNum['技术部-APP组'][2] + resultNum['技术部-Game组'][2] + resultNum['技术部-实用工具组'][2] + resultNum['技术部-Web组'][2]}}, color: "#005CDE" },
+				{ label: "传媒部", data: {{resultNum['传媒部-平面设计组'][2] + resultNum['传媒部-影像视讯组'][2]}}, color: "#00A36A" },
+				{ label: "活动部", data: {{resultNum['活动部'][2]}}, color: "#992B00" },
+				{ label: "联络部", data: {{resultNum['联络部'][2]}}, color: "#7D0096" }
+						];
+            var techData = [
+                { label: "Web 组", data: {{resultNum['技术部-Web组'][2]}}, color: "#005CDE" },
+                { label: "ACM 组", data: {{resultNum['技术部-ACM组'][2]}}, color: "#00A36A" },
+                { label: "Hips 组", data:{{resultNum['技术部-实用工具组'][2]}}, color: "#7D0096" },
+                { label: "App 组", data: {{resultNum['技术部-APP组'][2]}}, color: "#992B00" },
+                { label: "Game 组", data: {{resultNum['技术部-Game组'][2]}}, color: "#ea3b3b"}
+            ]
+
+			var opinions = {
+				series: {
+					pie: { 
+						innerRadius: 0.5,
+						show: true
+					}
+				},
+				legend: {
+					show: false
+				}
+			};
+
+			$(function(){
+					$.plot("#devsd1",allData,opinions);
+					$.plot("#devsd2",techData,opinions)
+			})
+		</script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="//v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/static/js/jquery.flot.js"></script>
+    <script src="/static/js/jquery.flot.pie.js"></script>
+    <script src="/static/js/test.js"></script>
+  </body>
+</html>

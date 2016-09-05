@@ -1,0 +1,27 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  color: #555;
+	position: relative;
+}
+
+.container {
+	width: 900px !important;
+}
+
+div.header{
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+
+#devsd1,
+#devsd2{
+	height:300px;
+	width:300px;
+	margin: auto;
+}
+
+.chart,
+.resultList{
+	padding-top: 40px;
+}
+

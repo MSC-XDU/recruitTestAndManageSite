@@ -42,36 +42,49 @@ def index():
     try:
         u = leancloud.User()
         u.become(token)
+        u.login()
     except LeanCloudError as e:
         message = ['text-danger',]
         if e.code == 210:
             message.append('用户名/密码 错误')
             return render_template('login.html',message=message)
-        if e.code == 211:
+        elif e.code == 211:
             message.append('不存在的用户')
             return render_template('login.html',message=message)
-    return redirect('/rockaroll')
+        else:
+            message.append(e.error)
+            return render_template('login.html',message=message)
+    if not u.get('isAuth'):
+        return redirect('/rockaroll')
+    else:
+        return redirect('/admin')
 
 @app.route('/login',methods=['GET','POST'])
 def login():
-    if request.method == 'GET':
+    if request.method == 'POST':
+        u = leancloud.User()
+        username = request.form.get('email')
+        password = request.form.get('pass')
+        try:
+            u.login(username,password)
+        except LeanCloudError as e:
+            message = ['text-danger',]
+            if e.code == 210:
+                message.append("用户名/密码 错误")
+            elif e.code == 211:
+                message.append("不存在的用户")
+            else:
+                message.append(e.error)
+            return render_template('login.html',message=message)
+        if u.get('isAuth'):
+            r = redirect('/admin')
+        else:
+            r = redirect('/rockaroll')
+        response = make_response(r)
+        response.set_cookie('token',value=u._session_token,expires=datetime.now()+timedelta(hours=6))
+        return response
+    else:
         return redirect('/')
-    u = leancloud.User()
-    username = request.form.get('email')
-    password = request.form.get('pass')
-    try:
-        u.login(username,password)
-    except LeanCloudError as e:
-        message = ['text-danger',]
-        if e.code == 210:
-            message.append("用户名/密码 错误")
-        if e.code == 211:
-            message.append("不存在的用户")
-        return render_template('login.html',message=message)
-    r = redirect('/rockaroll')
-    response = make_response(r)
-    response.set_cookie('token',value=u._session_token,expires=datetime.now()+timedelta(hours=6))
-    return response
 
 @app.route('/rockaroll',methods=['GET','POST'])
 def rock():
@@ -352,6 +365,26 @@ def lost():
         return render_template('login.html',message=message)
     else:
         return render_template('lost.html',message=[],url=url)
+
+@app.route('/admin')
+def indexAdmin():
+    token = request.cookies.get('token')
+    if not token:
+        return """为什么不尝试登陆呢?""",400
+    u = leancloud.User()
+    try:
+        u.become(token)
+    except LeanCloudError as e:
+        if e.code == 211:
+            return redirect('/')
+    u.login()
+    if not u.get('isAuth'):
+        return redirect('/')
+    q = leancloud.Query('index')
+    i = q.get('57cd03472e958a0068e6d0a5')
+    resultNum = i.get('result')
+    return render_template('dep.html',resultNum=resultNum)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
