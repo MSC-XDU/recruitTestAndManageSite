@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179ce19d-06b8-4336-b7be-ba0f473ba38c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dep.js" afterPath="$PROJECT_DIR$/static/js/dep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/test.js" afterPath="$PROJECT_DIR$/static/js/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep2.html" afterPath="$PROJECT_DIR$/templates/dep2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep3.html" afterPath="$PROJECT_DIR$/templates/dep3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep3.post.html" afterPath="$PROJECT_DIR$/templates/dep3.post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep4.html" afterPath="$PROJECT_DIR$/templates/dep4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="xdmsc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,24 +43,64 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.740741">
-              <caret line="481" column="31" selection-start-line="481" selection-start-column="31" selection-end-line="481" selection-end-column="31" />
+            <state vertical-scroll-proportion="-38.25926">
+              <caret line="489" column="30" selection-start-line="489" selection-start-column="30" selection-end-line="489" selection-end-column="30" />
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
-                <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-                <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
-                <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
-                <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+                <marker date="1473145433000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+                <marker date="1473145433000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+                <marker date="1473145433000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+                <marker date="1473145433000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dep3.post.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
+      <file leaf-file-name="dep2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dep2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+            <state vertical-scroll-proportion="-15.041667">
+              <caret line="55" column="158" selection-start-line="55" selection-start-column="158" selection-end-line="55" selection-end-column="158" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.235294">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="107" column="57" selection-start-line="107" selection-start-column="57" selection-end-line="107" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.166666">
+              <caret line="467" column="24" selection-start-line="467" selection-start-column="24" selection-end-line="467" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/front.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -61,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/dep.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -70,8 +119,18 @@
       <file leaf-file-name="dep3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4313726">
-              <caret line="60" column="48" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="48" />
+            <state vertical-scroll-proportion="-5.6666665">
+              <caret line="72" column="99" selection-start-line="72" selection-start-column="99" selection-end-line="72" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dep3.post.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12482663">
+              <caret line="6" column="101" selection-start-line="6" selection-start-column="101" selection-end-line="6" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -80,65 +139,9 @@
       <file leaf-file-name="dep4.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dep4.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.166667">
-              <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+            <state vertical-scroll-proportion="-18.125">
+              <caret line="75" column="151" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="151" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.529411">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dep2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dep2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.372549">
-              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-              <folding>
-                <marker date="1473071886000" expanded="true" signature="1359:1717" placeholder="..." />
-                <marker date="1473071886000" expanded="true" signature="1391:1474" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43828017">
-              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="46" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.431374">
-              <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dep.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dep.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.7647057">
-              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-              <folding>
-                <marker date="1473071451000" expanded="true" signature="1320:1752" placeholder="..." />
-                <marker date="1473071451000" expanded="true" signature="1359:1743" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -170,19 +173,20 @@
         <option value="$PROJECT_DIR$/static/js/front.js" />
         <option value="$PROJECT_DIR$/static/css/blog.css" />
         <option value="$PROJECT_DIR$/templates/lost.html" />
-        <option value="$PROJECT_DIR$/static/js/test.js" />
         <option value="$PROJECT_DIR$/cloud.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/dep.html" />
-        <option value="$PROJECT_DIR$/templates/dep2.html" />
-        <option value="$PROJECT_DIR$/templates/dep3.html" />
-        <option value="$PROJECT_DIR$/templates/dep3.post.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/static/js/dep.js" />
-        <option value="$PROJECT_DIR$/templates/dep4.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/js/test.js" />
+        <option value="$PROJECT_DIR$/templates/report.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/dep4.html" />
+        <option value="$PROJECT_DIR$/static/js/dep.js" />
+        <option value="$PROJECT_DIR$/templates/dep2.html" />
+        <option value="$PROJECT_DIR$/templates/dep3.post.html" />
+        <option value="$PROJECT_DIR$/templates/dep3.html" />
       </list>
     </option>
   </component>
@@ -192,7 +196,6 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-16" />
     <option name="y" value="23" />
     <option name="width" value="1401" />
     <option name="height" value="865" />
@@ -330,7 +333,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -545,7 +548,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="23" width="1401" height="865" extended-state="0" />
+    <frame x="0" y="23" width="1401" height="865" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27225903" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -567,6 +570,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27225903" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
@@ -587,14 +610,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -642,10 +657,10 @@
           <caret line="356" column="9" selection-start-line="356" selection-start-column="9" selection-end-line="356" selection-end-column="9" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -743,10 +758,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -794,10 +809,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -898,26 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/front.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="354" column="22" selection-start-line="354" selection-start-column="22" selection-end-line="354" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1471849273000" expanded="true" signature="6059:6406" placeholder="..." />
-            <marker date="1471849273000" expanded="true" signature="6215:6388" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/cover.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -957,14 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dep.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.7647057">
@@ -976,29 +963,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dep2.html">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.372549">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-          <folding>
-            <marker date="1473071886000" expanded="true" signature="1359:1717" placeholder="..." />
-            <marker date="1473071886000" expanded="true" signature="1391:1474" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="46" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/start.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.529411">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="355" column="2" selection-start-line="355" selection-start-column="2" selection-end-line="355" selection-end-column="2" />
+          <folding>
+            <marker date="1473139948000" expanded="true" signature="6059:6406" placeholder="..." />
+            <marker date="1473139948000" expanded="true" signature="6215:6388" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/front.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1006,53 +1001,77 @@
     <entry file="file://$PROJECT_DIR$/static/js/dep.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.431374">
-          <caret line="437" column="16" selection-start-line="437" selection-start-column="16" selection-end-line="437" selection-end-column="16" />
+        <state vertical-scroll-proportion="-18.166666">
+          <caret line="467" column="24" selection-start-line="467" selection-start-column="24" selection-end-line="467" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.740741">
-          <caret line="481" column="31" selection-start-line="481" selection-start-column="31" selection-end-line="481" selection-end-column="31" />
-          <folding>
-            <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473086122000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
-            <marker date="1473086122000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
-          </folding>
+        <state vertical-scroll-proportion="-8.235294">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dep3.html">
+    <entry file="file://$PROJECT_DIR$/templates/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4313726">
-          <caret line="60" column="48" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="48" />
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="107" column="57" selection-start-line="107" selection-start-column="57" selection-end-line="107" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dep4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.166667">
-          <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
+        <state vertical-scroll-proportion="-18.125">
+          <caret line="75" column="151" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="151" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/dep2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43828017">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="46" selection-end-column="12" />
+        <state vertical-scroll-proportion="-15.041667">
+          <caret line="55" column="158" selection-start-line="55" selection-start-column="158" selection-end-line="55" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.25926">
+          <caret line="489" column="30" selection-start-line="489" selection-start-column="30" selection-end-line="489" selection-end-column="30" />
+          <folding>
+            <element signature="e#23#62#0" expanded="true" />
+            <marker date="1473145433000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13411" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13414" placeholder="select * fro..SignUp..." />
+            <marker date="1473145433000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dep3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.6666665">
+          <caret line="72" column="99" selection-start-line="72" selection-start-column="99" selection-end-line="72" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dep3.post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12482663">
+          <caret line="6" column="101" selection-start-line="6" selection-start-column="101" selection-end-line="6" selection-end-column="101" />
           <folding />
         </state>
       </provider>

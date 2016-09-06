@@ -469,21 +469,25 @@ def personProfile():
     user = q.get(obid)
     t = user.get('user')
     t.fetch()
+    q1 = leancloud.Query('tyLog')
+    fuli = True
+    if not q1.equal_to("email",user.get("email")).find():
+        fuli = False
     if not user:
         return redirect('/')
     status = (u.get('dapartment') in user.get('department') or u.get('dapartment') == 'ALL') # dapartment 写错了懒得再改服务器字段了
     if request.method == 'GET':
-        return render_template('/dep4.html',user=user,info=t,status=status,id=obid)
+        return render_template('dep4.html',user=user,info=t,status=status,id=obid,fuli=fuli)
     elif request.method == 'POST':
         choice = request.form.get('choice')
         department = request.form.get('department')
         user.fetch()
         if choice == 'recommand':
-            if status or department == "NULL":
-                print u.get('dapartment')
+            if not (status and department != "NULL"):
+                print u.get("name")
                 abort(500)
             user.set("department",department)
-        elif choice == 'pass':
+        elif choice == 'accept':
             user.set("pass_first",True)
         elif choice == 'reject':
             user.set("pass_first",False)
@@ -507,10 +511,11 @@ def report():
     u.login()
     if not u.get('isAuth'):
         return redirect('/')
-    q = leancloud.Query('_leancloud.User')
+    q = leancloud.Query('_User')
     user = q.get(obid)
     user.fetch()
     email = user.get("email")
+    name = user.get('name')
 
     q1 = leancloud.Query('tyLog')
     q2 = leancloud.Query('acmLog')
@@ -518,33 +523,27 @@ def report():
     q4 = leancloud.Query('gameLog')
     q5 = leancloud.Query('hipsLog')
     ty = {};acm = {};app = {};game={};hips = {}
-    langList = ['C','C++','Java']
-
+    lang = None
     try:
         TY = q1.equal_to('email',email).find()[0]
         ty['ty1'] = ty['ty2'] = ty['ty3'] = ty['ty31'] = ty['ty32'] = ty['ty4'] = ty['ty5'] = None
         for i in ty.keys():
             ty[i] = TY.get(i)
     except LeanCloudError:
-        pass
+        print LeanCloudError
+        raise LeanCloudError
     except IndexError:
         pass
     try:
         ACM = q2.equal_to('email',email).find()[0]
         lang = ACM.get('acmlanguage')
-        if not lang:
-            try:
-                langList.remove(lang)
-                langList = [lang,]+langList
-            except ValueError:
-                pass
         acm['acm1'] = acm['acm2'] = acm['acm3'] = None
         for i in acm.keys():
-            if ACM.get(i):
-                acm[i] = True
+            acm[i] = ACM.get(i)
     except LeanCloudError:
         # network error
-        pass
+        print LeanCloudError
+        raise LeanCloudError
     except IndexError:
         pass
 
@@ -576,7 +575,7 @@ def report():
     except IndexError:
         pass
 
-    return render_template('index.html',ty=ty,acm=acm,langList=langList,app=app,game=game,hips=hips,email=email,status=False)
+    return render_template('report.html',ty=ty,acm=acm,lang=lang,app=app,game=game,hips=hips,email=name,status=False)
 
 
 if __name__ == '__main__':

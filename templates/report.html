@@ -41,7 +41,7 @@
 
     <div class="container hidden-xs" style="padding-top:40px">
       <div class="row">
-          <form action="/submit" method="post" enctype="multipart/form-data">
+          <form>
             <div class="col-sm-9 blog-main">
           <div class="blog-post">
             <h2 class="blog-post-title" id="tongyong">通用题</h2>
@@ -111,10 +111,7 @@
 						<p>因为资源有限，我们不会立刻执行提交的代码，也不会显示执行情况，每道题我们将会选择最新的提交结果进行测试，希望同学们在本机测试好再提交。</p>
 						<p><del>也是因为资源问题，</del>大家一定要注意保留内存...除了第一题以外，其它题目都会注明来源方便同学们去做测试。</p>
 						<select class="form-control" name="acmlanguage">
-                            <option>请选择...</option>
-                            {% for lang in langList %}
-							    <option value="{{ lang|e }}">{{ lang|e }}</option>
-                            {% endfor %}
+							<option value="{{ lang|e }}">{{ lang|e }}</option>
 						</select>
           	<div style="padding-top:40px">
 							<h3 class="question" id="acm1">
@@ -136,7 +133,7 @@
 								<strong>Input</strong>:17851817<br>
 								<strong>Output</strong>:NO
 							</blockquote>
-							<input type="file" class="filestyle" name="acm1"/>
+							<textarea type="text" class="form-control" rows="4" name="acm1">{% if acm['acm1'] %}{{acm['acm1']|e}}{% endif %}</textarea>
 						</div>
 						<div style="padding-top:40px">
 							<h3 class="question" id="acm2">
@@ -171,7 +168,7 @@
 							</blockquote>
 							<p>提示：</p>
 							<img src="/static/img/G3.png" class='pic'>
-							<input type="file" class="filestyle" name="acm2"/>
+							<textarea type="text" class="form-control" rows="4" name="acm2">{% if acm['acm2'] %}{{acm['acm2']|e}}{% endif %}</textarea>
 							<p style="padding-top:10px">来源：<a href="http://acm.xidian.edu.cn/problem.php?id=1156" target="_blank">http://acm.xidian.edu.cn/problem.php?id=1156</a></p>
 						</div>
           	<div style="padding-top:40px">
@@ -199,7 +196,7 @@
 							<p><strong>提示：</strong>
           			30%的数据，满足 1 &lt;= N,M &lt;= 10 ； 0 &lt;= T &lt;= 100 。 100%的数据，满足 1 &lt;= N,M &lt;= 50 ； 0 &lt;= T &lt;= 2500 。
           		</p>
-          		<input type="file" class="filestyle" name="acm3"/>
+          		<textarea type="text" class="form-control" rows="4" name="acm3">{% if acm['acm3'] %}{{acm['acm3']|e}}{% endif %}</textarea>
           		<p style="padding-top:10px">来源：<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1296" target="_blank">http://www.lydsy.com/JudgeOnline/problem.php?id=1296</a></p>
           	</div>
           </div><!-- /.blog-post -->

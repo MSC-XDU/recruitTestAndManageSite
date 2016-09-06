@@ -25,7 +25,8 @@ div.header{
 	padding-top: 40px;
 }
 
-a.question{
+a.question,
+a.check{
 	color: #000000;
 	text-decoration: none;
 }

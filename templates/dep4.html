@@ -73,7 +73,7 @@
                 </tr>
                 <tr>
                     <th>所报部门</th>
-                    <td>{{user.get('department')|e}}</td>
+                    <td>{{user.get('department')|e}}{% if user.get('pass_first') %}<a href="#" class="check"><i class="fa fa-check"></i></a>{% endif %}</td>
                 </tr>
             </tbody>
         </table>
@@ -103,8 +103,10 @@
                 </tr>
             </tbody>
         </table>
+        {% if fuli %}
         <h3>福利题报告</h3>
         <p><a href="/report?id={{info.id}}" target="_blank">点此进入</a></p>
+        {% endif %}
         <div class="footer" style="padding-bottom: 100px;">
             <h3>负责人最终决定</h3>
             {% if info.get("passed_first") %}
@@ -179,7 +181,7 @@
             });
         $("button#submit").click(function () {
             var finalurl = "/admin/profile?id={{id}}";
-            $.ajax({
+            r = $.ajax({
                 type: "post",
                 url: finalurl,
                 data: { "choice":$("#final option:selected").val(),
@@ -189,8 +191,13 @@
                         $("div.popover-content").html(
                                 $("div#success").html()
                         );
-                    }
-                })
+                    },
+                error: function(){
+                    $("div.popover-content").html(
+                            "<p class=\"text-danger\">错误的操作</p>"
+                    );
+                }
+                });
             });
        })
 </script>

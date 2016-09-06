@@ -27,3 +27,9 @@ $(function() {
         placement: "bottom"
     })
 });
+$(function(){
+    $('a.check').tooltip({
+        title: "已经通过一面",
+        placement: "bottom"
+    })
+});
