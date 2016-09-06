@@ -57,7 +57,14 @@ def reindex():
 
 @engine.define
 def syncField():
-    result = "select user from SignUp where (sex='男' or sex='女') and email is exists"
-
+    result = leancloud.Query.do_cloud_query("select user from SignUp where (sex='男' or sex='女') and email is exists").results
+    field = ['name','sex','home','national','bidthday','qq','mobilePhoneNumber','email']
+    for i in result:
+        u = i.get("user")
+        u.fetch();i.fetch()
+        for j in field:
+            i.set(j,u.get(j))
+        i.save()
+    return 'ok'
 
 
