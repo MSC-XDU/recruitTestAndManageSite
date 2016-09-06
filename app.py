@@ -577,6 +577,9 @@ def report():
 
     return render_template('report.html',ty=ty,acm=acm,lang=lang,app=app,game=game,hips=hips,email=name,status=False)
 
+@app.route('/sync')
+def sync():
+    return leancloud.cloudfunc.run("syncField")
 
 if __name__ == '__main__':
     app.run(debug=True)
