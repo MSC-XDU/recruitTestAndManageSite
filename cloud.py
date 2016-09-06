@@ -55,3 +55,9 @@ def reindex():
     i.set('result',result)
     i.save()
 
+@engine.define
+def syncField():
+    result = "select user from SignUp where (sex='男' or sex='女') and email is exists"
+
+
+
