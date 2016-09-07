@@ -207,14 +207,14 @@
 					<div class="blog-post">
             <h2 class="blog-post-title" id="app">APP</h2>
             <p class="blog-post-meta">万物皆 App</p>
-						<h3 class="question">1.找数</h3>
+						<h3 class="question">1.找数{% if app['app1'] %}<i class="fa fa-check"></i>{% endif %}</h3>
           	<p>自己创建不大于 500 的斐波那契数列。并找出其中的质数。</p>
           	<blockquote>
 							提交格式:每个数字中间空一个空格<br>
           		1 2 3 4 5 6 7 8 9
           	</blockquote>
           	<textarea type="text" class="form-control" rows="2" placeholder="...还不赶紧找..." name="app1">{% if app['app1'] %}{{ app['app1']|e }}{% endif %}</textarea>
-          	<h3 class="question">2.找数再找数</h3>
+          	<h3 class="question">2.找数再找数{% if app['app2'] %}<i class="fa fa-check"></i>{% endif %}</h3>
           	<p>有能力者可以再将找到的质数中不大于 20 的数逐一加自己身份证最后一位数字，组成新数列，得到的新数列的项作累乘求和。</p>
           	<p><del>前端表示这个你们自己面试时候再提交吧...记得带着代码来哦...</del></p>
           	<div class="checkbox disabled">
