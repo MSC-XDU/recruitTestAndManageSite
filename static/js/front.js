@@ -1,6 +1,8 @@
 function runningFunction(){
-	r = $.post('/web/3');
+	r = $.post({
+		url:'/web/3',
+		aync: false
+	});
 	setTimeout("javascript:location.href='/web/4'", 3000);
-	console.log(r.resoponseText);
-	return r.resoponseText;
+	console.log(r.responseText);
 }
