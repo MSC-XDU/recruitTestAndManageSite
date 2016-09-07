@@ -32,7 +32,6 @@ engine = Engine(app)
 #     return 200
 
 @engine.after_save('SignUp')
-@engine.after_update('SignUp')
 def reindex():
     field = ['活动部','联络部','传媒部-平面设计组','传媒部-影像视讯组','技术部-ACM组','技术部-APP组','技术部-Game组','技术部-实用工具组','技术部-Web组']
     result = {}
@@ -57,7 +56,6 @@ def reindex():
     i.save()
     return 'ok'
 
-@engine.after_save('SignUp')
 @engine.after_update('SignUp')
 def Sync():
     field = ['name','sex','home','national','bidthday','qq','mobilePhoneNumber','email']
