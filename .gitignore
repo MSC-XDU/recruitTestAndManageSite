@@ -1,3 +1,4 @@
 .avoscloud/
 start.sh
 .idea
+/templates/test.py

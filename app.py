@@ -437,7 +437,7 @@ def department():
     if not u.get('isAuth'):
         return redirect('/')
     if request.method == 'GET':
-        result = leancloud.Query.do_cloud_query("select * from SignUp where sex='男' or sex='女'").results
+        result = leancloud.Query.do_cloud_query("select * from SignUp where sex='男' or sex='女' limit 10000").results
         count = len(result)
         return render_template('dep3.html',result=result,count=count)
     else:
@@ -477,7 +477,13 @@ def personProfile():
         return redirect('/')
     status = (u.get('dapartment') in user.get('department') or u.get('dapartment') == 'ALL') # dapartment 写错了懒得再改服务器字段了
     if request.method == 'GET':
-        return render_template('dep4.html',user=user,info=t,status=status,id=obid,fuli=fuli)
+        fileList = user.get("files")
+        if fileList:
+            for file in fileList:
+                file.fetch()
+        else:
+            fileList = []
+        return render_template('dep4.html',user=user,info=t,status=status,id=obid,fuli=fuli,fileList=fileList)
     elif request.method == 'POST':
         choice = request.form.get('choice')
         department = request.form.get('department')
@@ -579,7 +585,7 @@ def report():
 
 @app.route('/sync')
 def sync():
-    return leancloud.cloudfunc.run("syncField")
+    return leancloud.cloudfunc.run("Sync")
 
 if __name__ == '__main__':
     app.run(debug=True)

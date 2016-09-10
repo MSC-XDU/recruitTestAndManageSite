@@ -58,9 +58,9 @@ def reindex():
 
 @engine.after_update('SignUp')
 def Sync():
-    field = ['name','sex','home','national','bidthday','qq','mobilePhoneNumber','email']
+    field = ['name','sex','home','national','birthday','qq','mobilePhoneNumber','email']
     result = leancloud.Query.do_cloud_query(
-        "select user from SignUp where email is not exists"
+        "select user from SignUp where birthday is not exists"
     ).results
     for i in result:
         u = i.get('user')

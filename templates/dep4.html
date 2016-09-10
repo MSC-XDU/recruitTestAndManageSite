@@ -99,6 +99,9 @@
                 <tr>
                     <th width="10%" style="vertical-align: middle;text-align: center">上传文件</th>
                     <td>
+                        {% for file in fileList %}
+                            <a href="{{file.get('url')}}" target="_blank">{{file.get('name')}}</a><br>
+                        {% endfor %}
                     </td>
                 </tr>
             </tbody>
