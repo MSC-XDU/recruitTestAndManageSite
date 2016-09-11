@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179ce19d-06b8-4336-b7be-ba0f473ba38c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cloud.py" afterPath="$PROJECT_DIR$/cloud.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dep4.html" afterPath="$PROJECT_DIR$/templates/dep4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report.html" afterPath="$PROJECT_DIR$/templates/report.html" />
     </list>
     <ignored path="xdmsc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="448" column="27" selection-start-line="448" selection-start-column="27" selection-end-line="448" selection-end-column="27" />
+              <caret line="412" column="9" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
                 <marker date="1473489387000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
@@ -60,10 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="28.125">
+              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.060240965">
+            <state vertical-scroll-proportion="0.0">
               <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
@@ -74,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/start.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="49" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="49" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -90,32 +98,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cloud.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cloud.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="70" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.8032129">
+              <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
               <folding>
                 <element signature="e#17#56#0" expanded="true" />
-                <marker date="1473484334000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-                <marker date="1473484334000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-                <marker date="1473484334000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-                <marker date="1473484334000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-                <marker date="1473484334000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
-                <marker date="1473484334000" expanded="true" signature="2022:2074" placeholder="select user ..SignUp..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="355" column="2" selection-start-line="355" selection-start-column="2" selection-end-line="355" selection-end-column="2" />
-              <folding>
-                <marker date="1473139948000" expanded="true" signature="6059:6406" placeholder="..." />
-                <marker date="1473139948000" expanded="true" signature="6215:6388" placeholder="..." />
+                <marker date="1473570279000" expanded="true" signature="1164:1229" placeholder="select count..SignUp..." />
+                <marker date="1473570279000" expanded="true" signature="1166:1227" placeholder="select count..SignUp..." />
+                <marker date="1473570279000" expanded="true" signature="1316:1357" placeholder="select count..SignUp..." />
+                <marker date="1473570279000" expanded="true" signature="1316:1373" placeholder="select count..SignUp..." />
+                <marker date="1473570279000" expanded="true" signature="1316:1377" placeholder="select count..SignUp..." />
+                <marker date="1473570279000" expanded="true" signature="1992:2044" placeholder="select user ..SignUp..." />
               </folding>
             </state>
           </provider>
@@ -185,14 +180,14 @@
         <option value="$PROJECT_DIR$/templates/dep2.html" />
         <option value="$PROJECT_DIR$/templates/dep3.post.html" />
         <option value="$PROJECT_DIR$/templates/dep3.html" />
-        <option value="$PROJECT_DIR$/templates/report.html" />
         <option value="$PROJECT_DIR$/static/js/front.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/dep4.html" />
         <option value="$PROJECT_DIR$/templates/test.py" />
-        <option value="$PROJECT_DIR$/cloud.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/templates/report.html" />
+        <option value="$PROJECT_DIR$/cloud.py" />
       </list>
     </option>
   </component>
@@ -251,7 +246,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -336,6 +330,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -557,7 +552,7 @@
     <frame x="0" y="23" width="1401" height="865" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2869757" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29580575" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -677,12 +672,12 @@
           <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
           <folding>
             <element signature="e#17#56#0" expanded="true" />
-            <marker date="1473484334000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="2022:2074" placeholder="select user ..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1164:1229" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1166:1227" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1357" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1373" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1377" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1992:2044" placeholder="select user ..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -748,12 +743,12 @@
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="e#17#56#0" expanded="true" />
-            <marker date="1473484334000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="2022:2074" placeholder="select user ..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1164:1229" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1166:1227" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1357" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1373" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1377" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1992:2044" placeholder="select user ..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -791,12 +786,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#17#56#0" expanded="true" />
-            <marker date="1473484334000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="2022:2074" placeholder="select user ..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1164:1229" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1166:1227" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1357" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1373" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1377" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1992:2044" placeholder="select user ..SignUp..." />
           </folding>
         </state>
       </provider>
@@ -917,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="158" selection-start-line="55" selection-start-column="158" selection-end-line="55" selection-end-column="158" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,19 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="276" column="134" selection-start-line="276" selection-start-column="134" selection-end-line="276" selection-end-column="134" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dep4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="46" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,10 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="355" column="2" selection-start-line="355" selection-start-column="2" selection-end-line="355" selection-end-column="2" />
-          <folding>
-            <marker date="1473139948000" expanded="true" signature="6059:6406" placeholder="..." />
-            <marker date="1473139948000" expanded="true" signature="6215:6388" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -987,51 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="70" selection-end-column="15" />
-          <folding>
-            <element signature="e#17#56#0" expanded="true" />
-            <marker date="1473484334000" expanded="true" signature="1178:1243" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1180:1241" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1371" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1387" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="1330:1391" placeholder="select count..SignUp..." />
-            <marker date="1473484334000" expanded="true" signature="2022:2074" placeholder="select user ..SignUp..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="448" column="27" selection-start-line="448" selection-start-column="27" selection-end-line="448" selection-end-column="27" />
-          <folding>
-            <element signature="e#23#62#0" expanded="true" />
-            <marker date="1473489387000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
-            <marker date="1473489387000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
-            <marker date="1473489387000" expanded="true" signature="13380:13437" placeholder="select * fro..SignUp..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1042,9 +977,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060240965">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="412" column="9" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="9" />
+          <folding>
+            <element signature="e#23#62#0" expanded="true" />
+            <marker date="1473489387000" expanded="true" signature="12739:12784" placeholder="select * fro..SignUp..." />
+            <marker date="1473489387000" expanded="true" signature="13380:13425" placeholder="select * fro..SignUp..." />
+            <marker date="1473489387000" expanded="true" signature="13380:13437" placeholder="select * fro..SignUp..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="28.125">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8032129">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <element signature="e#17#56#0" expanded="true" />
+            <marker date="1473570279000" expanded="true" signature="1164:1229" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1166:1227" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1357" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1373" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1316:1377" placeholder="select count..SignUp..." />
+            <marker date="1473570279000" expanded="true" signature="1992:2044" placeholder="select user ..SignUp..." />
+          </folding>
         </state>
       </provider>
     </entry>
