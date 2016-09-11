@@ -33,6 +33,16 @@ engine = Engine(app)
 
 @engine.after_save('SignUp')
 def reindex(**kwargs):
+    field = ['name','sex','home','national','birthday','qq','mobilePhoneNumber','email']
+    result = leancloud.Query.do_cloud_query(
+        "select user from SignUp where birthday is not exists"
+    ).results
+    for i in result:
+        u = i.get('user')
+        u.fetch();i.fetch()
+        for j in field:
+            i.set(j,u.get(j))
+        i.save()
     field = ['活动部','联络部','传媒部-平面设计组','传媒部-影像视讯组','技术部-ACM组','技术部-APP组','技术部-Game组','技术部-实用工具组','技术部-Web组']
     result = {}
     for i in field:
@@ -56,16 +66,16 @@ def reindex(**kwargs):
     i.save()
     return 'ok'
 
-@engine.after_save('SignUp')
-def Sync(**kwargs):
-    field = ['name','sex','home','national','birthday','qq','mobilePhoneNumber','email']
-    result = leancloud.Query.do_cloud_query(
-        "select user from SignUp where birthday is not exists"
-    ).results
-    for i in result:
-        u = i.get('user')
-        u.fetch();i.fetch()
-        for j in field:
-            i.set(j,u.get(j))
-        i.save()
-    return 'ok'
+# @engine.after_save('SignUp')
+# def Sync(**kwargs):
+#     field = ['name','sex','home','national','birthday','qq','mobilePhoneNumber','email']
+#     result = leancloud.Query.do_cloud_query(
+#         "select user from SignUp where birthday is not exists"
+#     ).results
+#     for i in result:
+#         u = i.get('user')
+#         u.fetch();i.fetch()
+#         for j in field:
+#             i.set(j,u.get(j))
+#         i.save()
+#     return 'ok'
