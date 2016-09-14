@@ -33,7 +33,7 @@
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav">
 					<li><a href="/admin">首页</a></li>
-					<li><a href="#">部门汇总</a></li>
+					<li><a href="/department">部门汇总</a></li>
 				</ul>
 				<div class="navbar-form navbar-right">
 					<div class="form-group">
@@ -49,11 +49,12 @@
 			<div class="resultList">
 				<div class="list-group">
 					{% for user in result %}
-					<a href="/admin/profile?id={{user.id}}" class="list-group-item">
+					<a href="/admin/profile?id={{user.id}}" class="list-group-item" target="_blank">
+						{% if user.get("pass_first") == True %}<span class="badge"><i class="fa fa-check"></i>ACCEPT</span>
 						<h3 class="list-group-item-heading">姓名: {{user.get('name')|e}}</h3>
 						<h4>电话: {{user.get('mobilePhoneNumber')}}</h4>
 						<h4>邮箱: {{user.get('email')}}</h4>
-						<h4>预报部门: {{user.get('department')|e}}{% if user.get("pass_first") %}<a href="#" class="check"><i class="fa fa-check"></i></a>{% endif %}</h4>
+						<h4>预报部门: {{user.get('department')|e}}</h4>
 					</a>
 					{% endfor %}
 				</div>

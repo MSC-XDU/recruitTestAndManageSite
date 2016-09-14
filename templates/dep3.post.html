@@ -2,7 +2,7 @@
     <h2>查询结果: {{ count }} 人</h2>
     <div class="list-group">
         {% for user in result %}
-        <a href="/admin/profile?id={{user.id}}" class="list-group-item">
+        <a href="/admin/profile?id={{user.id}}" class="list-group-item" target="_blank">
             {% if user.get("pass_first") == True %}<span class="badge"><i class="fa fa-check"></i>ACCEPT</span>
             {% elif user.get("pass_first") == False %}<span class="badge"><i class="fa fa-exclamation"></i>REJECT</span>
             {% endif %}
